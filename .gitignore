@@ -13,7 +13,7 @@ results
 
 node_modules
 npm-debug.log
-sass-cache
+.sass-cache
 *.log
 
 *.swp
