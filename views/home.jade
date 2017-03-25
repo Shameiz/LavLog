@@ -18,7 +18,9 @@ block content
 
     .wrapper
       h1 LavLog
-      button.button.but-pad Login
-      button.button.but-pad Register
+      form(action='/login')
+        input.button.but-pad(type='submit' value='LOGIN') 
+      form(action='/signup')
+        input.button.but-pad(type='submit' value='REGISTER')
 
         

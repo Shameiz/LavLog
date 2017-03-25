@@ -5810,42 +5810,107 @@ button.close {
 @media print {
   .hidden-print {
     display: none !important; } }
-body {
-  background-color: #f2ebd9; }
-
-h1 {
-  color: #25485b;
-  text-align: center;
-  font-family: "Oleo Script Swash Caps";
-  font-size: 100px;
-  padding-top: 50px;
-  margin-bottom: 30px; }
-
 .wrapper {
   width: 300px;
   margin: 0 auto; }
-
-.but-pad {
-  margin-bottom: 25px; }
 
 .button {
   width: 300px;
   height: 50px;
   background-color: #94c1ef;
-  color: #f2ebd9;
+  color: #25485b;
   border: 0;
   font-size: 30px;
-  font-family: "Yantramanav", sans-serif;
+  font-family: "Raleway", sans-serif;
   border-radius: 10px;
   outline: none;
-  transition: background-color 0.5s; }
+  transition: background-color 0.5s;
+  width: 100%; }
 
-button:hover {
-  color: #fffb8f;
+.button:hover {
+  color: #fffb7b;
   background-color: #25485b; }
 
-button:focus {
+.center {
+  text-align: center; }
+
+.heading {
+  font-size: 50px;
+  color: #94c1ef; }
+
+.font1 {
+  font-family: 'Oleo Script Swash Caps'; }
+
+.font2 {
+  font-family: 'Yantramanav', sans-serif; }
+
+body {
+  background-color: #25485b; }
+
+h1 {
+  color: #fffb7b;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 75px;
+  padding-top: 50px;
+  margin-bottom: 30px; }
+
+.but-pad {
+  margin-bottom: 25px; }
+
+input:focus {
   outline: none; }
+
+.font1 {
+  font-family: 'Oleo Script Swash Caps'; }
+
+.font2 {
+  font-family: 'Yantramanav', sans-serif; }
+
+.panel {
+  background-color: #25485b;
+  color: #f2ebd9; }
+
+.btn-toolbar.text-center {
+  margin-top: 10px; }
+
+.label.font2 {
+  color: #f2ebd9; }
+
+.panel {
+  margin-top: 50px; }
+
+.btn-facebook,
+.btn-twitter {
+  color: #25485b; }
+
+.wrapper {
+  width: 300px;
+  margin: 0 auto; }
+
+.button {
+  width: 300px;
+  height: 50px;
+  background-color: #94c1ef;
+  color: #25485b;
+  border: 0;
+  font-size: 30px;
+  font-family: "Raleway", sans-serif;
+  border-radius: 10px;
+  outline: none;
+  transition: background-color 0.5s;
+  width: 100%; }
+
+.button:hover {
+  color: #fffb7b;
+  background-color: #25485b; }
+
+.center {
+  text-align: center; }
+
+.heading {
+  font-size: 50px;
+  color: #94c1ef; }
 
 .font1 {
   font-family: 'Oleo Script Swash Caps'; }
