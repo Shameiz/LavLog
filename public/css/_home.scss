@@ -1,0 +1,52 @@
+@import 'classes'; 
+
+body {
+	background-color: $primary-color;
+}
+
+h1 {
+	color: $fourth-color;
+	text-align: center;
+	font-family: $primary-font;
+	font-size: 75px;
+	padding-top: 50px;
+	margin-bottom: 30px;
+}
+
+.but-pad {
+	margin-bottom: 25px;
+}
+
+input:focus {
+	outline: none;
+}
+
+.font1 {
+	font-family: 'Oleo Script Swash Caps';
+}
+
+.font2 {
+	font-family: 'Yantramanav', sans-serif;
+}
+
+.panel {
+	background-color: $primary-color;
+	color: $third-color;
+}
+
+.btn-toolbar.text-center {
+	margin-top: 10px;
+}
+
+.label.font2 {
+	color: $third-color;
+}
+
+.panel {
+	margin-top: 50px;
+}
+
+.btn-facebook,
+.btn-twitter {
+	color: $primary-color;
+}
