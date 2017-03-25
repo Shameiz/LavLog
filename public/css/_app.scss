@@ -1,0 +1,63 @@
+$primary-color: rgba(37, 72, 91, 1);
+$secondary-color: rgba(148, 193, 239, 1);
+$third-color: rgba(242, 235, 217, 1);
+$fourth-color: rgba(255, 251, 143, 1);
+
+$primary-font: 'Oleo Script Swash Caps';
+$secondary-font: 'Yantramanav', sans-serif;
+
+body {
+	background-color: $third-color;
+}
+
+h1 {
+	color: $primary-color;
+	text-align: center;
+	font-family: $primary-font;
+	font-size: 100px;
+	padding-top: 50px;
+	margin-bottom: 30px
+}
+
+.wrapper {
+	width: 300px; 
+	margin: 0 auto;
+}
+
+.but-pad {
+	margin-bottom: 25px;
+}
+
+.button {
+	width: 300px;
+	height: 50px;
+	background-color: $secondary-color;
+	color: $third-color;
+	border: 0;
+	font-size: 30px;
+	font-family: $secondary-font;
+	border-radius: 10px;
+	outline: none;
+	transition: background-color 0.5s
+}
+
+button:hover {
+	color: $fourth-color;
+	background-color: $primary-color;
+}
+
+button:focus {
+	outline: none;
+}
+
+.font1 {
+	font-family: $primary-font;
+}
+
+.font2 {
+	font-family: $secondary-font;
+}
+
+.center {
+	text-align: center;
+}
