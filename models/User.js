@@ -9,6 +9,11 @@ var schemaOptions = {
   }
 };
 
+var Comment = new mongoose.Schema({
+    body  : String
+  , date  : Date
+});
+
 var userSchema = new mongoose.Schema({
   name: String,
   email: { type: String, unique: true},
@@ -23,7 +28,15 @@ var userSchema = new mongoose.Schema({
   twitter: String,
   google: String,
   github: String,
-  vk: String
+  vk: String,
+  currentPay: Number,
+  isSalary: Boolean,
+  isHourly: Boolean,
+  overtimeRate: Number,
+  employer: String,
+  position: String,
+  age: Number,
+  gender: String
 }, schemaOptions);
 
 userSchema.pre('save', function(next) {
