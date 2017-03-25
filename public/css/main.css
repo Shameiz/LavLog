@@ -5906,6 +5906,11 @@ input:focus {
   outline: none;
   color: none; }
 
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  color: #fffb7b;
+  background-color: #fffb7b; }
+
 .wrapper {
   max-width: 300px;
   margin: 0 auto; }

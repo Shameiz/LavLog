@@ -1,6 +1,7 @@
 extends layout
 
 block content
+  include includes/header
   .container-fluid
     if messages.error
       .alert.alert-danger(role='alert')
