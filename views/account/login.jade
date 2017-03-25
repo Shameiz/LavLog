@@ -10,25 +10,21 @@ block content
               div= error.msg
 
         form(method='POST')
-          legend.font1 Log In
           .form-group
-            label.control-label(for='email') Email
+            label.font2(for='email') Email
             input.form-control(type='email', name='email', id='email', placeholder='Email', autofocus=true)
           .form-group
-            label.control-label(for='password') Password
+            label.font2(for='password') Password
             input.form-control(type='password', name='password', id='password', placeholder='Password')
           .form-group
             a(href='/forgot')
               strong Forgot your password?
-          button.btn.btn-success(type='submit') Log in
-
-        .hr-title
-          span or
+          button.btn.btn-success.btn-block(type='submit') LOGIN
 
         .btn-toolbar.text-center
           a.btn.btn-facebook(href='/auth/facebook') Sign in with Facebook
           a.btn.btn-twitter(href='/auth/twitter') Sign in with Twitter
 
-    p.text-center Don't have an account?&nbsp;
+    p.center Don't have an account?&nbsp;
       a(href='/signup')
         strong Sign up

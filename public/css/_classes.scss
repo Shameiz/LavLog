@@ -1,0 +1,40 @@
+.wrapper {
+	width: 300px; 
+	margin: 0 auto;
+}
+
+.button {
+	width: 300px;
+	height: 50px;
+	background-color: $secondary-color;
+	color: $primary-color;
+	border: 0;
+	font-size: 30px;
+	font-family: $secondary-font;
+	border-radius: 10px;
+	outline: none;
+	transition: background-color 0.5s;
+	width: 100%
+}
+
+.button:hover {
+	color: $fourth-color;
+	background-color: $primary-color;
+}
+
+.center {
+	text-align: center;
+}
+
+.heading {
+	font-size: $heading-size;
+	color: $secondary-color;
+}
+
+.font1 {
+	font-family: 'Oleo Script Swash Caps';
+}
+
+.font2 {
+	font-family: 'Yantramanav', sans-serif;
+}
