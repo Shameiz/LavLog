@@ -5848,10 +5848,13 @@ button:focus {
   outline: none; }
 
 .font1 {
-  font-family: 'Oleo Script Swash Caps'; }
+  font-family: "Oleo Script Swash Caps"; }
 
 .font2 {
-  font-family: 'Yantramanav', sans-serif; }
+  font-family: "Yantramanav", sans-serif; }
+
+.center {
+  text-align: center; }
 
 html {
   position: relative;

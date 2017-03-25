@@ -51,9 +51,13 @@ button:focus {
 }
 
 .font1 {
-	font-family: 'Oleo Script Swash Caps';
+	font-family: $primary-font;
 }
 
 .font2 {
-	font-family: 'Yantramanav', sans-serif;
+	font-family: $secondary-font;
+}
+
+.center {
+	text-align: center;
 }
