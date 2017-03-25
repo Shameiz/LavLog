@@ -1,60 +1,76 @@
-var minutes = 00;
-  var seconds = 00;
-  var appendSeconds = document.getElementById("seconds")
-  var appendMinutes = document.getElementById("minutes")
-  var buttonStart = document.getElementById('button-start');
-  var buttonStop = document.getElementById('button-stop');
-  var Interval ;
 
-  var d = new Date();
-  var startTime = d.getTime();
-  var endTime;
-  var time;
-  var month = d.getMonth() + 1;
-  var day = d.getDate();
-  var year = d.getFullYear();
-  var weekday = d.getDay();
-  var weekOfYear;
-  var bathroomTrip = {};
+   var minutes = 00;
+   var seconds = 00;
+   var appendSeconds = document.getElementById("seconds")
+   var appendMinutes = document.getElementById("minutes")
+   var buttonToggle = document.getElementById('button-toggle');
+   var pooping = false;
+   var Interval ;
 
-  buttonStart.onclick = function() {
-    clearInterval(Interval);
-    Interval = setInterval(startTimer, 1000);
-  }
+   var d = new Date();
+   var startTime = d.getTime();
+   var endTime;
+   var time;
+   var month = d.getMonth() + 1;
+   var day = d.getDate();
+   var year = d.getFullYear();
+   var weekday = d.getDay();
+   var weekOfYear;
+   var bathroomTrip = {};
 
-  buttonStop.onclick = function() {
-    var now = new Date();
-    var start = new Date(now.getFullYear(), 0, 0);
-    var diff = now - start;
-    var oneDay = 1000 * 60 * 60 * 24;
-    var day = Math.floor(diff / oneDay);
+   buttonToggle.onclick = function() {
+      if (pooping == true){
+         buttonToggle.innerHTML = "Start";
+         pooping = false;
 
-    clearInterval(Interval);
-    time = seconds + minutes * 60;
-    endTime = (time * 1000 + startTime);
-    minutes = "00";
-    seconds = "00";
-    appendSeconds.innerHTML = seconds;
-    appendMinutes.innerHTML = minutes;
+         var now = new Date();
+         var start = new Date(now.getFullYear(), 0, 0);
+         var diff = now - start;
+         var oneDay = 1000 * 60 * 60 * 24;
+         var day = Math.floor(diff / oneDay);
 
+         clearInterval(Interval);
+         time = seconds + minutes * 60;
+         endTime = (time * 1000 + startTime);
+         minutes = "00";
+         seconds = "00";
+         appendSeconds.innerHTML = seconds;
+         appendMinutes.innerHTML = minutes;
 
-    bathroomTrip = {
-      time : time,
-      month : month,
-      day : day,
-      year : year,
-      weekday : weekday,
-      weekOfYear : weekOfYear
-    }
+         bathroomTrip = {
+            time : time,
+            month : month,
+            day : day,
+            year : year,
+            weekday : weekday,
+            weekOfYear : weekOfYear
+         }
 
-    if (time != 0) {
-      $.ajax({
-        type: "POST",
-        url: "/addtime",
-        data: bathroomTrip
-      });
-    }
-  }
+         if (time != 0) {
+            $.ajax({
+              type: "PUT",
+              url: "/",
+              data: bathroomTrip
+            });
+         }
+      }else{
+         buttonToggle.innerHTML = "Stop";
+         pooping = true;
+         clearInterval(Interval);
+         Interval = setInterval(startTimer, 1000);
+         $.ajax({
+            url : '/',
+            type : 'POST',
+            dataType:'json',
+            success : function(data) {
+            },
+            error : function(request,error)
+            {
+              alert("Request: "+JSON.stringify(request));
+            }
+         });
+      }
+   }
 
   function startTimer () {
     seconds++;
@@ -68,7 +84,6 @@ var minutes = 00;
     }
 
     if (seconds > 59) {
-      console.log("minutes");
       minutes++;
       appendMinutes.innerHTML = "0" + minutes;
       seconds = 0;
