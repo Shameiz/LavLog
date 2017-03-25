@@ -1,6 +1,7 @@
 extends ../layout
 
 block content
+  h1 LavLog
   .login-container.container
     .panel
       .panel-body
@@ -10,7 +11,6 @@ block content
               div= error.msg
 
         form(method='POST')
-          legend Create an account
           .form-group
             label(for='name') Name
             input.form-control(type='text', name='name', id='name', placeholder='Name', autofocus=true)
@@ -20,10 +20,8 @@ block content
           .form-group
             label(for='password') Password
             input.form-control(type='password', name='password', id='password', placeholder='Password')
-          .form-group
-            small.text-muted By signing up, you agree to the <a href="/">Terms of Service</a>.
-          button.btn.btn-success(type='submit') Create an account
 
+          button.btn.btn-success.btn-block(type='submit') Next
         .hr-title
           span or
 

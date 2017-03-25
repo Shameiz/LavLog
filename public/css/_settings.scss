@@ -1,0 +1,25 @@
+$primary-color: rgba(37, 72, 91, 1);
+$secondary-color: rgba(148, 193, 239, 1);
+$third-color: rgba(242, 235, 217, 1);
+$fourth-color: rgba(255, 251, 123, 1);
+$fifth-color: rgba(81, 86, 81, 1);
+
+$primary-font: 'Montserrat', sans-serif;
+$secondary-font:'Raleway', sans-serif;
+
+$heading-size: 50px;
+
+@import 'contact';
+@import 'home';
+@import 'classes';
+
+@import 'includes/footer';
+@import 'includes/header';
+
+@import 'account/reset';
+@import 'account/login';
+@import 'account/signup';
+@import 'account/forgot';
+@import 'account/profile';
+
+

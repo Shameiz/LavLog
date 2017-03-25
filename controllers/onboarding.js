@@ -60,7 +60,9 @@ exports.userOnboardingGet = function(req, res) {
   if (req.user) {
     return res.redirect('/');
   }
-  res.render('account/forgot', {
-    title: 'Log in'
+
+
+  res.render('account/welcome', {
+    title: 'Welcome'
   });
 };
