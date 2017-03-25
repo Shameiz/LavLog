@@ -90,7 +90,6 @@ exports.signupPost = function(req, res, next) {
     req.flash('error', errors);
     return res.redirect('/signup');
   }
-
   User.findOne({ email: req.body.email }, function(err, user) {
     if (user) {
       req.flash('error', { msg: 'The email address you have entered is already associated with another account.' });
@@ -102,11 +101,9 @@ exports.signupPost = function(req, res, next) {
       password: req.body.password
     });
     user.save(function(err) {
+      res.redirect('/welcome');
       req.logIn(user, function(err) {
-        // res.redirect('/');
-        res.render('account/welcome',{
-          title: 'Welcome'
-        });
+        res.redirect('/welcome');
       });
     });
   });
