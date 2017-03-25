@@ -102,8 +102,10 @@ exports.signupPost = function(req, res, next) {
       password: req.body.password
     });
     user.save(function(err) {
+      res.redirect('/welcome');
       req.logIn(user, function(err) {
          res.redirect('/welcome');
+        res.redirect('/welcome');
       });
     });
   });
@@ -113,7 +115,7 @@ exports.signupPost = function(req, res, next) {
  * GET /account
  */
 exports.accountGet = function(req, res) {
-  res.render('account/profile', {
+  res.render('account/', {
     title: 'My Account'
   });
 };
@@ -161,6 +163,18 @@ exports.accountPut = function(req, res, next) {
     });
   });
 };
+
+/**
+ * GET /profile
+ */
+exports.getProfile = function(req, res, next) {
+  User.findOne({ name: req.user.name }, function(err, user) {
+    res.render('account/profile', {
+      user : user.name,
+      picture : req.user.picture
+    })
+  })
+}
 
 /**
  * DELETE /account

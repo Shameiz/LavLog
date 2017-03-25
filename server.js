@@ -13,6 +13,9 @@ var dotenv = require('dotenv');
 var mongoose = require('mongoose');
 var passport = require('passport');
 var sass = require('node-sass-middleware');
+var db = require('./db')
+
+mongoose.connect(db.url)
 
 // Load environment variables from .env file
 dotenv.load();
@@ -28,12 +31,6 @@ require('./config/passport');
 
 var app = express();
 
-
-mongoose.connect(process.env.MONGODB);
-mongoose.connection.on('error', function() {
-  console.log('MongoDB Connection Error. Please make sure that MongoDB is running.');
-  process.exit(1);
-});
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 app.set('port', process.env.PORT || 3000);
@@ -61,7 +58,9 @@ app.post('/', homeController.startPooping);
 app.put('/', homeController.stopPooping);
 // detailed registration
 app.get('/welcome', onboardingController.userOnboardingGet);
+//app.post('/welcome', onboardingController.userOnboardingPost);
 app.put('/welcome', onboardingController.userOnboardingPut);
+
 // routing contact page
 app.get('/contact', contactController.contactGet);
 app.post('/contact', contactController.contactPost);
@@ -84,6 +83,8 @@ app.get('/auth/facebook', passport.authenticate('facebook', { scope: ['email', '
 app.get('/auth/facebook/callback', passport.authenticate('facebook', { successRedirect: '/', failureRedirect: '/login' }));
 app.get('/auth/twitter', passport.authenticate('twitter'));
 app.get('/auth/twitter/callback', passport.authenticate('twitter', { successRedirect: '/', failureRedirect: '/login' }));
+//profile route
+app.get('/profile', userController.getProfile);
 
 // Production error handler
 if (app.get('env') === 'production') {

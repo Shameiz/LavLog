@@ -1,0 +1,15 @@
+nav.navbar.navbar-default.navbar-static-top{
+  background-color: $fourth-color;
+}
+
+.navbar-header > a{
+  color: $primary-color;
+  font-family: $primary-font;
+  font-size: 22px;
+}
+
+ul.nav.navbar-nav >li >a{
+  color: black;
+  font-family: $primary-font;
+  font-size: 22px;
+}
