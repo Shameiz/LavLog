@@ -1,6 +1,7 @@
 extends ../layout
 
 block content
+  h1 LavLog
   .login-container.container
     .panel
       .panel-body
@@ -20,6 +21,9 @@ block content
             a(href='/forgot')
               strong Forgot your password?
           button.btn.btn-success.btn-block(type='submit') LOGIN
+
+        .hr-title
+          span or
 
         .btn-toolbar.text-center
           a.btn.btn-facebook(href='/auth/facebook') Sign in with Facebook
