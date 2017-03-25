@@ -7,3 +7,18 @@ a:hover {
 a {
 	color: $secondary-color;
 }
+
+.btn.btn-success {
+	border: none;
+	height: 50px;
+	margin-top: 15px;
+}
+
+.btn-twitter,
+.btn-facebook {
+	width: 100%;
+}
+
+.btn-toolbar > .btn {
+	margin-bottom: 10px;
+}
