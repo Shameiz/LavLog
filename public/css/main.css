@@ -5823,17 +5823,18 @@ button.close {
   margin: 0 auto; }
 
 .button {
-  width: 300px;
+  width: 300px !important;
   height: 50px;
   background-color: #25485b;
   color: #fffb7b;
   border: 1px solid #fffb7b;
-  font-size: 30px;
-  font-family: "Raleway", sans-serif;
-  border-radius: 10px;
+  font-size: 30px !important;
+  font-family: "Raleway", sans-serif !important;
+  border-radius: 10px !important;
   outline: none;
   transition: background-color 0.5s;
-  width: 100%; }
+  font-weight: normal !important;
+  line-height: normal; }
 
 .button:hover {
   color: #25485b;
@@ -5891,17 +5892,18 @@ input:focus {
   margin: 0 auto; }
 
 .button {
-  width: 300px;
+  width: 300px !important;
   height: 50px;
   background-color: #25485b;
   color: #fffb7b;
   border: 1px solid #fffb7b;
-  font-size: 30px;
-  font-family: "Raleway", sans-serif;
-  border-radius: 10px;
+  font-size: 30px !important;
+  font-family: "Raleway", sans-serif !important;
+  border-radius: 10px !important;
   outline: none;
   transition: background-color 0.5s;
-  width: 100%; }
+  font-weight: normal !important;
+  line-height: normal; }
 
 .button:hover {
   color: #25485b;

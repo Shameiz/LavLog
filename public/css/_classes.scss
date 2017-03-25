@@ -4,17 +4,18 @@
 }
 
 .button {
-	width: 300px;
+	width: 300px !important;
 	height: 50px;
 	background-color: $primary-color;
-	color: $fourth-color;
+	color: $fourth-color; 
 	border: 1px solid $fourth-color;
-	font-size: 30px;
-	font-family: $secondary-font;
-	border-radius: 10px;
+	font-size: 30px !important;
+	font-family: $secondary-font !important; 
+	border-radius: 10px !important;
 	outline: none;
 	transition: background-color 0.5s;
-	width: 100%
+	font-weight: normal !important;
+	line-height: normal;
 }
 
 .button:hover {
