@@ -42,6 +42,7 @@ exports.loginPost = function(req, res, next) {
     req.flash('error', errors);
     return res.redirect('/login');
   }
+  console.log(req.body);
 
   passport.authenticate('local', function(err, user, info) {
     if (!user) {
@@ -225,7 +226,6 @@ exports.forgotPost = function(req, res, next) {
   req.sanitize('email').normalizeEmail({ remove_dots: false });
 
   var errors = req.validationErrors();
-
   if (errors) {
     req.flash('error', errors);
     return res.redirect('/forgot');

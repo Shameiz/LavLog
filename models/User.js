@@ -9,9 +9,10 @@ var schemaOptions = {
   }
 };
 
-var Comment = new mongoose.Schema({
-    body  : String
-  , date  : Date
+var poopSchema = new mongoose.Schema({
+    startTime: { type: Date, default: Date.now },
+    stopTime: Date,
+    moneyMade: Number
 });
 
 var userSchema = new mongoose.Schema({
@@ -36,7 +37,8 @@ var userSchema = new mongoose.Schema({
   employer: String,
   position: String,
   age: Number,
-  gender: String
+  gender: String,
+  poops: [poopSchema]
 }, schemaOptions);
 
 userSchema.pre('save', function(next) {
@@ -73,5 +75,4 @@ userSchema.options.toJSON = {
 };
 
 var User = mongoose.model('User', userSchema);
-
 module.exports = User;

@@ -18,7 +18,7 @@ var sass = require('node-sass-middleware');
 dotenv.load();
 
 // Controllers
-var HomeController = require('./controllers/home');
+var homeController = require('./controllers/home');
 var userController = require('./controllers/user');
 var contactController = require('./controllers/contact');
 var onboardingController = require('./controllers/onboarding');
@@ -54,14 +54,14 @@ app.use(function(req, res, next) {
 });
 app.use(express.static(path.join(__dirname, 'public')));
 
-// welcome page might not need these 2 under here
+
+//home page with timer
+app.get('/', homeController.getHome);
+app.post('/', homeController.startPooping);
+app.put('/', homeController.stopPooping);
+// detailed registration
 app.get('/welcome', onboardingController.userOnboardingGet);
 app.put('/welcome', onboardingController.userOnboardingPut);
-
-
-
-// routing home page
-app.get('/', HomeController.index);
 // routing contact page
 app.get('/contact', contactController.contactGet);
 app.post('/contact', contactController.contactPost);

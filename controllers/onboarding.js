@@ -11,7 +11,6 @@ var User = require('../models/User');
  * Update profile information OR change password.
  */
 exports.userOnboardingPut = function(req, res, next) {
-   console.log(req.user);
    User.findOne({ email: req.user.email }, function(err, user) {
 
       user.currentPay = req.body.currentPay;
@@ -23,6 +22,7 @@ exports.userOnboardingPut = function(req, res, next) {
       user.employer = req.body.employer;
       user.position = req.body.position;
       user.age = req.body.age;
+      user.poops = [];
 
       user.save(function(err) {
          req.logIn(user, function(err) {
