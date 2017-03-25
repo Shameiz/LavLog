@@ -56,7 +56,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // welcome page might not need these 2 under here
 app.get('/welcome', onboardingController.userOnboardingGet);
-// app.put('/welcome', onboardingController.userOnboardingPut);
+app.put('/welcome', onboardingController.userOnboardingPut);
+
+
 
 // routing home page
 app.get('/', HomeController.index);

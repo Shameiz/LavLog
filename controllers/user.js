@@ -101,9 +101,8 @@ exports.signupPost = function(req, res, next) {
       password: req.body.password
     });
     user.save(function(err) {
-      res.redirect('/welcome');
       req.logIn(user, function(err) {
-        res.redirect('/welcome');
+         res.redirect('/welcome');
       });
     });
   });
