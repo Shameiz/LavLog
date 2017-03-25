@@ -1,4 +1,4 @@
-var express = require('express');
+  var express = require('express');
 var path = require('path');
 
 var dotenv = require('dotenv');
@@ -56,7 +56,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // welcome page might not need these 2 under here
 app.get('/welcome', onboardingController.userOnboardingGet);
-// app.put('/welcome', onboardingController.userOnboardingPut);
+app.post('/welcome', onboardingController.userOnboardingPost);
 
 // routing home page
 app.get('/', HomeController.index);
@@ -82,6 +82,8 @@ app.get('/auth/facebook', passport.authenticate('facebook', { scope: ['email', '
 app.get('/auth/facebook/callback', passport.authenticate('facebook', { successRedirect: '/', failureRedirect: '/login' }));
 app.get('/auth/twitter', passport.authenticate('twitter'));
 app.get('/auth/twitter/callback', passport.authenticate('twitter', { successRedirect: '/', failureRedirect: '/login' }));
+//profile route
+app.get('/profile', userController.profileGet);
 
 // Production error handler
 if (app.get('env') === 'production') {
