@@ -1,23 +1,8 @@
-extends layout
-
-block content
-  include includes/header
+extends ../layout
+block content 
+	include ../includes/header
 	h1 #{user}
-	div(class="col-md-8")
-		table(class="table table-inverse" style="background-color:black;color:white;")
-			thead(class="thead-inverse")
-				tr
-					th #
-					th Date
-					th Duration
-					th Money Earned
-						
-				tbody
-					tr
-						th(scope="row") 1
-							td 10/5/2017
-							td 30 mins
-							td $200
-						
-	include ../includes/graph
-		
+	if (picture)
+		img(src="#{picture}")
+	else 
+		h1 photo fail
