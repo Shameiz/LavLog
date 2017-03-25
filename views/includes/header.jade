@@ -6,7 +6,7 @@ nav.navbar.navbar-default.navbar-static-top
         span.icon-bar
         span.icon-bar
         span.icon-bar
-      a.navbar-brand(href='/') 🔥🔥🔥🔥🔥🔥🔥🔥
+      a.navbar-brand(href='/')
     #navbar.navbar-collapse.collapse
       ul.nav.navbar-nav
 
@@ -21,9 +21,11 @@ nav.navbar.navbar-default.navbar-static-top
           a(href='/logout') Logout
         if user
           li.dropdown
-            a.navbar-avatar.dropdown-toggle(href='/profile')
-              if user.picture
-                img(src=user.picture)
+
+            a.navbar-avatar.dropdown-toggle(href='#', data-toggle='dropdown')
+              if picture
+                img(src=picture)
+
               else
                 img(src=user.gravatar)
               

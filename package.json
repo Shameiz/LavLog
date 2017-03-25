@@ -17,6 +17,7 @@
     "express-session": "^1.2.1",
     "express-validator": "^2.20.4",
     "foreman": "^2.0.0",
+    "highcharts": "^5.0.9",
     "jade": "^1.11.0",
     "method-override": "^2.3.5",
     "mongoose": "^4.4.8",
