@@ -9,27 +9,65 @@ block content
             for error in messages.error
               div= error.msg
 
-        form(method='POST')
+        form(method='POST', action='/account?_method=PUT')
           legend Thank you for signing up!
           .form-group
-            label(for='name') Name
-            input.form-control(type='text', name='name', id='name', placeholder='Name', autofocus=true)
+            label(for='currentPay') Current Pay
+            input.form-control(type='text', name='currentPay', id='currentPay', placeholder='Current Pay', autofocus=true value=user.currentPay)
+        
           .form-group
-            label(for='email') Email
-            input.form-control(type='email', name='email', id='email', placeholder='Email')
+            label.col-sm-3 Are you Paid per hour?
+            .col-sm-4
+              label.radio-inline.radio.col-sm-4
+                input(type='radio', checked=(user.isSalary == 'yes'), name='isSalary', value='yes', data-toggle='radio')
+                span Yes
+              label.radio-inline.col-sm-4
+                input(type='radio', checked=(user.isSalary == 'female'), name='isSalary', value='yes', data-toggle='radio')
+                span No
+                
           .form-group
-            label(for='password') Password
-            input.form-control(type='password', name='password', id='password', placeholder='Password')
+            label(for='isHourly') If So, What is your Hourly Rate
+            input.form-control(type='text', name='isHourly', id='isHourly', placeholder='15.50' value = user.isHourly)
+        
+          .form-group
+            label(for='overtimeRate') Overtime Rate 
+            input.form-control(type='text', name='overtimeRate', id='overtimeRate', placeholder='19.00' value =user.overtimeRate)
+        
+          .form-group
+            label(for='employer') Employer 
+            input.form-control(type='text', name='employer', id='employer', placeholder='LavLog LLC.' value=user.employer)
+        
+          .form-group
+            label(for='position') Position 
+            input.form-control(type='text', name='position', id='position', placeholder='Poo tracker' value=user.position)
+        
+          .form-group
+            label(for='age') Age 
+            input.form-control(type='text', name='age', id='age', placeholder='20')
+          .form-group
+            label.col-sm-3(for='location') Location
+            .col-sm-7
+              input.form-control(type='text', name='location', id='location', value=user.location)
+  
+          .form-group
+            label.col-sm-3 Gender
+            .col-sm-4
+              label.radio-inline.radio.col-sm-4
+                input(type='radio', checked=(user.gender == 'male'), name='gender', value='male', data-toggle='radio')
+                span Male
+              label.radio-inline.col-sm-4
+                input(type='radio', checked=(user.gender == 'female'), name='gender', value='female', data-toggle='radio')
+                span Female
+              label.radio-inline.col-sm-4
+                input(type='radio', checked=(user.gender == 'none'), name='gender', value='none', data-toggle='radio')
+                span Non-Binary
+                                    
           .form-group
             small.text-muted By signing up, you agree to the <a href="/">Terms of Service</a>.
           button.btn.btn-success(type='submit') Create an account
 
         .hr-title
           span or
-
-        .btn-toolbar.text-center
-          a.btn.btn-facebook(href='/auth/facebook') Sign in with Facebook
-          a.btn.btn-twitter(href='/auth/twitter') Sign in with Twitter
 
     p.text-center Already have an account?&nbsp;
       a(href='/login')
