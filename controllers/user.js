@@ -90,7 +90,6 @@ exports.signupPost = function(req, res, next) {
     req.flash('error', errors);
     return res.redirect('/signup');
   }
-
   User.findOne({ email: req.body.email }, function(err, user) {
     if (user) {
       req.flash('error', { msg: 'The email address you have entered is already associated with another account.' });
@@ -193,7 +192,7 @@ exports.unlink = function(req, res, next) {
         break;
       case 'github':
           user.github = undefined;
-        break;      
+        break;
       default:
         req.flash('error', { msg: 'Invalid OAuth Provider' });
         return res.redirect('/account');
