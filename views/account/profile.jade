@@ -1,8 +1,22 @@
 extends ../layout
 
-block content 
+block content
 	h1 #{user}
-	if (picture)
-		img(src="#{picture}")
-	else 
-		h1 photo fail
+	div(class="col-md-8")
+		table(class="table table-inverse" style="background-color:black;color:white;")
+			thead(class="thead-inverse")
+				tr
+					th #
+					th Date
+					th Duration
+					th Money Earned
+						
+				tbody
+					tr
+						th(scope="row") 1
+							td 10/5/2017
+							td 30 mins
+							td $200
+						
+	include ../includes/graph
+		
