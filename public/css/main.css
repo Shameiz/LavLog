@@ -5921,6 +5921,19 @@ input:focus {
 .font2 {
   font-family: 'Yantramanav', sans-serif; }
 
+nav.navbar.navbar-default.navbar-static-top {
+  background-color: #fffb7b; }
+
+.navbar-header > a {
+  color: #25485b;
+  font-family: "Montserrat", sans-serif;
+  font-size: 22px; }
+
+ul.nav.navbar-nav > li > a {
+  color: black;
+  font-family: "Montserrat", sans-serif;
+  font-size: 22px; }
+
 label.font2,
 p,
 a:hover {
@@ -5934,6 +5947,19 @@ label {
 
 .hr-title span {
   background-color: #25485b; }
+
+.form-horizontal > legend {
+  font-family: "Montserrat", sans-serif;
+  color: #fffb7b; }
+
+.form-group > label {
+  font-family: "Raleway", sans-serif;
+  color: #f2ebd9;
+  font-size: 50px; }
+
+.form-group > p {
+  font-family: "Raleway", sans-serif;
+  color: #f2ebd9; }
 
 html {
   position: relative;
@@ -5962,7 +5988,7 @@ footer {
   padding-bottom: 14.5px;
   transition: all 0.25s; }
   .navbar-default .navbar-nav > li > a:hover {
-    border-bottom-color: #bdbdbd; }
+    border-bottom-color: #25485b; }
   .navbar-default .navbar-nav > li > a.navbar-avatar {
     padding-top: 13px;
     padding-bottom: 10px; }
@@ -5972,7 +5998,7 @@ footer {
       height: 30px; }
 
 .navbar-default .navbar-nav > li.active > a {
-  border-bottom-color: #3f51b5; }
+  border-bottom-color: #25485b; }
 
 .panel-heading + .panel-body {
   padding-top: 0; }
