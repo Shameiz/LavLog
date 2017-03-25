@@ -1,0 +1,31 @@
+extends ../layout
+
+block content
+  .row
+    .medium-8.medium-offset-2.columns
+      .card
+        if messages.error
+          .callout.alert(role='alert')
+            for error in messages.error
+              div= error.msg
+
+        h4.card-title Log In
+        form(method='POST')
+          label(for='email') Email
+          input(type='email', name='email', id='email', placeholder='Email', autofocus)
+
+          label(for='password') Password
+          input(type='password', name='password', id='password', placeholder='Password')
+
+          p
+            a(href='/forgot')
+              strong Forgot your password?
+
+          button.button.expanded(type='submit') Log in
+
+        .hr-title
+          span or
+
+        .button-group.text-center.expanded
+      a.button.facebook(href='/auth/facebook') Sign in with Facebook
+      a.button.twitter(href='/auth/twitter') Sign in with Twitter
