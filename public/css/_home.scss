@@ -41,3 +41,22 @@ input:focus {
 .time-margin {
 	margin-top: 50px;
 }
+
+.navbar-default .navbar-nav > li.active > a {
+	border: none;
+}
+
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+	border: none;
+}
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+	color: $primary-color;
+	background-color: $primary-color;
+}
+
+.navbar-default .navbar-toggle {
+	border: none;
+}

@@ -6,7 +6,7 @@ nav.navbar.navbar-default.navbar-static-top
         span.icon-bar
         span.icon-bar
         span.icon-bar
-      a.navbar-brand(href='/') 💩
+      a.navbar-brand(href='/') 🔥🔥🔥🔥🔥🔥🔥🔥
     #navbar.navbar-collapse.collapse
       ul.nav.navbar-nav
 
@@ -21,16 +21,10 @@ nav.navbar.navbar-default.navbar-static-top
           a(href='/logout') Logout
         if user
           li.dropdown
-            a.navbar-avatar.dropdown-toggle(href='#', data-toggle='dropdown')
+            a.navbar-avatar.dropdown-toggle(href='/profile')
               if user.picture
                 img(src=user.picture)
               else
                 img(src=user.gravatar)
-              | <span> #{user.name || user.email || user.id} </span>
-              i.caret
-            ul.dropdown-menu
-              li
-                a(href='/account') My Account
-              li.divider
-              li
-                a(href='/logout') Logout
+              
+            

@@ -5886,6 +5886,21 @@ input:focus {
 .time-margin {
   margin-top: 50px; }
 
+.navbar-default .navbar-nav > li.active > a {
+  border: none; }
+
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border: none; }
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  color: #25485b;
+  background-color: #25485b; }
+
+.navbar-default .navbar-toggle {
+  border: none; }
+
 .wrapper {
   max-width: 300px;
   margin: 0 auto; }
