@@ -74,7 +74,7 @@ footer {
   padding-bottom: ($navbar-padding-vertical - 3);
   transition: all 0.25s;
   &:hover {
-    border-bottom-color: #bdbdbd;
+    border-bottom-color: $primary-color;
   }
   &.navbar-avatar {
     padding-top: $navbar-padding-vertical - 4.5;
@@ -88,7 +88,7 @@ footer {
 }
 
 .navbar-default .navbar-nav > li.active > a {
-  border-bottom-color: #3f51b5;
+  border-bottom-color: $primary-color;
 }
 
 // Panels
