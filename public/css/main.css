@@ -5817,9 +5817,7 @@ button.close {
 @media print {
   .hidden-print {
     display: none !important; } }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
 .wrapper {
   width: 300px;
   margin: 0 auto; }
@@ -5853,9 +5851,6 @@ button.close {
 
 .font2 {
   font-family: 'Yantramanav', sans-serif; }
->>>>>>> login-view
-=======
->>>>>>> 634e7030ae22c93a3ec1ebb147256ff20df0e021
 
 body {
   background-color: #25485b; }
@@ -5926,13 +5921,10 @@ input:focus {
   color: #94c1ef; }
 
 .font1 {
-  font-family: "Oleo Script Swash Caps"; }
+  font-family: 'Oleo Script Swash Caps'; }
 
 .font2 {
-  font-family: "Yantramanav", sans-serif; }
-
-.center {
-  text-align: center; }
+  font-family: 'Yantramanav', sans-serif; }
 
 html {
   position: relative;
