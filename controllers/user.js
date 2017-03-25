@@ -103,11 +103,8 @@ exports.signupPost = function(req, res, next) {
     user.save(function(err) {
       res.redirect('/welcome');
       req.logIn(user, function(err) {
-<<<<<<< HEAD
          res.redirect('/welcome');
-=======
         res.redirect('/welcome');
->>>>>>> login-view
       });
     });
   });

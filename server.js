@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-  var express = require('express');
+var express = require('express');
 var path = require('path');
 
 var dotenv = require('dotenv');
@@ -57,7 +56,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // welcome page might not need these 2 under here
 app.get('/welcome', onboardingController.userOnboardingGet);
-app.post('/welcome', onboardingController.userOnboardingPost);
+//app.post('/welcome', onboardingController.userOnboardingPost);
 app.put('/welcome', onboardingController.userOnboardingPut);
 
 // routing home page
@@ -85,7 +84,7 @@ app.get('/auth/facebook/callback', passport.authenticate('facebook', { successRe
 app.get('/auth/twitter', passport.authenticate('twitter'));
 app.get('/auth/twitter/callback', passport.authenticate('twitter', { successRedirect: '/', failureRedirect: '/login' }));
 //profile route
-app.get('/profile', userController.profileGet);
+app.get('/profile', userController.getProfile);
 
 // Production error handler
 if (app.get('env') === 'production') {
@@ -100,7 +99,7 @@ app.listen(app.get('port'), function() {
 });
 
 module.exports = app;
-=======
+
 var express = require('express');
 var path = require('path');
 
@@ -191,4 +190,3 @@ app.listen(app.get('port'), function() {
 });
 
 module.exports = app;
->>>>>>> login-view
