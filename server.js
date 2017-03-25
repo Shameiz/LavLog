@@ -25,6 +25,7 @@ var homeController = require('./controllers/home');
 var userController = require('./controllers/user');
 var contactController = require('./controllers/contact');
 var onboardingController = require('./controllers/onboarding');
+var statsController = require('./controllers/stats');
 
 // Passport OAuth strategies
 require('./config/passport');
@@ -51,6 +52,8 @@ app.use(function(req, res, next) {
 });
 app.use(express.static(path.join(__dirname, 'public')));
 
+
+app.get('/stats', statsController.getUserStats);
 
 //home page with timer
 app.get('/', homeController.getHome);
