@@ -11,62 +11,33 @@ var User = require('../models/User');
  * Update profile information OR change password.
  */
 exports.userOnboardingPut = function(req, res, next) {
-
-  // var errors = req.validationErrors();
    console.log(req.user);
+   User.findOne({ email: req.user.email }, function(err, user) {
 
-  // console.log(req.body);
-  // if (req.user) {
-  //   return res.redirect('/account');
-  // }
+      user.currentPay = req.body.currentPay;
+      user.gender = req.body.gender;
+      user.location = req.body.location;
+      user.isSalary = req.body.isSalary;
+      user.isHourly= req.body.isHourly;
+      user.overtimeRate = req.body.overtimeRate;
+      user.employer = req.body.employer;
+      user.position = req.body.position;
+      user.age = req.body.age;
 
-
-
-   // User.findOne({ email: req.body.email }, function(err, user) {
-   //    if (user) {
-   //       req.flash('error', { msg: 'The email address you have entered is already associated with another account.' });
-   //       return res.redirect('/signup');
-   //    }
-   //    user = new User({
-   //       name: req.body.name,
-   //       email: req.body.email,
-   //       password: req.body.password
-   //    });
-   //    user.save(function(err) {
-   //       req.logIn(user, function(err) {
-   //          res.redirect('/welcome');
-   //       });
-   //    });
-   // });
-
-  // User.findById(req.body.user.id, function(err, user) {
-  //     // user.email = user.email;
-  //     user.gender = req.body.gender;
-  //     user.location = req.body.location;
-  //     user.website = req.body.website;
-  //     user.currentPay = req.body.currentPay;
-  //     user.isSalary = req.body.isSalary;
-  //     user.overtimeRate = req.body.overtimeRate;
-  //     user.employer = req.body.overtime;
-  //     user.position = "administrative assistant";
-  //     user.age = 18;
-
-  //   user.save(function(err) {
-  //     if ('password' in req.body) {
-  //       req.flash('success', { msg: 'Your password has been changed.' });
-  //     } else if (err && err.code === 11000) {
-  //       req.flash('error', { msg: 'The email address you have entered is already associated with another account.' });
-  //     } else {
-  //       req.flash('success', { msg: 'Your profile information has been updated.' });
-  //       res.redirect('/yay');
-  //     }
-  //     res.redirect('/');
-  //   });
-  // });
+      user.save(function(err) {
+         req.logIn(user, function(err) {
+            res.redirect('/');
+         });
+      });
+   });
 };
 
 exports.userOnboardingGet = function(req, res) {
-  res.render('account/welcome', {
-    title: 'Welcome'
-  });
+
+   if (!req.user){
+      res.redirect('/signup');
+   }
+   res.render('account/welcome', {
+     title: 'Welcome'
+   });
 };
