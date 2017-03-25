@@ -14,11 +14,16 @@ block content
       .alert.alert-info(role='alert')
         for info in messages.info
           div= info.msg
-
-
-    .wrapper
-      h1 LavLog
-      button.button.but-pad Login
-      button.button.but-pad Register
+    
+    if user
+      .wrapper
+        span "00:00:00"
+        button.button.but-pad Start
+    
+    else      
+      .wrapper
+        h1 LavLog
+        button.button.but-pad Login
+        button.button.but-pad Register
 
         
