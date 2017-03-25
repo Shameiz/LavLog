@@ -14,14 +14,14 @@ block content
       .alert.alert-info(role='alert')
         for info in messages.info
           div= info.msg
-    
+
     if user
       include includes/counter
-    
-    else      
+
+    else
       .wrapper
         h1 LavLog
         a(class="but-pad btn button" href="/login") Login
         a.btn.button.but-pad(href="/signup") Register
 
-        
+

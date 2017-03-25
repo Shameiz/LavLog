@@ -4,13 +4,20 @@ body {
 	background-color: $primary-color;
 }
 
+#minutes,
+#seconds {
+	font-family: digital-clock-font;
+	font-size: 155px;
+}
+
 h1 {
 	color: $fourth-color;
 	text-align: center;
 	font-family: $primary-font;
 	font-size: 75px;
-	padding-top: 50px;
+	padding-top: 20px;
 	margin-bottom: 30px;
+	margin-top: 40px;
 }
 
 .but-pad {
@@ -40,4 +47,33 @@ input:focus {
 
 .time-margin {
 	margin-top: 50px;
+}
+
+.navbar-default .navbar-nav > li.active > a {
+	border: none;
+}
+
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+	border: none;
+}
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+	color: $primary-color;
+	background-color: $primary-color;
+}
+
+.navbar-default .navbar-toggle {
+	border: none;
+}
+
+@font-face{
+ font-family:'digital-clock-font';
+ src: url('Digital Dismay.otf');
+}
+
+input:focus {
+	outline: none;
+	color: none;
 }
