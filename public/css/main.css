@@ -3971,9 +3971,6 @@ tbody.collapse.in {
     .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
       color: #333;
       background-color: transparent; }
-  .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-    color: #262626;
-    background-color: transparent; }
   .navbar-default .navbar-nav > .disabled > a, .navbar-default .navbar-nav > .disabled > a:hover, .navbar-default .navbar-nav > .disabled > a:focus {
     color: #ccc;
     background-color: transparent; }
@@ -5914,6 +5911,14 @@ input:focus {
 div.container-fluid {
   padding: 0; }
 
+.message {
+  font-size: 30px;
+  width: 66%;
+  max-width: 450px;
+  margin: 30px auto;
+  text-align: center;
+  font-family: "Raleway", sans-serif; }
+
 .wrapper {
   max-width: 300px;
   margin: 0 auto; }
@@ -6162,8 +6167,6 @@ footer {
   border-bottom: 3px solid transparent;
   padding-bottom: 14.5px;
   transition: all 0.25s; }
-  .navbar-default .navbar-nav > li > a:hover {
-    border-bottom-color: #25485b; }
   .navbar-default .navbar-nav > li > a.navbar-avatar {
     padding-top: 13px;
     padding-bottom: 10px; }

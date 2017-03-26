@@ -1,27 +1,30 @@
 extends layout
 
 block content
+
 	include includes/header
 
-	h1.groups-header My Groups
-	ul
-		a(href="/groups/mHacks9")
-			li.center mHacks9
-		a(href="/groups/NSA")
-			li.center NSA
-		a(href="/groups/littlecaesars")
-			li.center Little Caesars
-		a(href="/groups/coderdojo")
-			li.center CoderDojo
+	.animated.fadeIn
+
+		h1.groups-header My Groups
+		ul
+			a(href="/groups/mHacks9")
+				li.center mHacks9
+			a(href="/groups/NSA")
+				li.center NSA
+			a(href="/groups/littlecaesars")
+				li.center Little Caesars
+			a(href="/groups/coderdojo")
+				li.center CoderDojo
 
 
-	.group-wrapper		
-		h1.groups-header Join A Group
+		.group-wrapper
+			h1.groups-header Join A Group
 
-		form(action='/joingroup' method='put')
-			input(class="form-control" type='text' placeholder='Enter Existing Group Name')
+			form(action='/joingroup' method='put')
+				input(class="form-control" type='text' placeholder='Enter Existing Group Name')
 
-		h1.groups-header Create A Group
+			h1.groups-header Create A Group
 
-		form(action='/creategroup' method='put')
-			input(class="form-control" type='text' placeholder='Enter New Group Name')
+			form(action='/creategroup' method='put')
+				input(class="form-control" type='text' placeholder='Enter New Group Name')
