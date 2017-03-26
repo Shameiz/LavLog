@@ -17,11 +17,13 @@ exports.getUserStats = function(req, res) {
          if (user.poops[i].seconds > longest) {
             longest = user.poops[i].seconds;
          }
-         earnings += user.poops[i].moneyMade;
+         if(user.poops[i].moneyMade){
+            earnings += user.poops[i].moneyMade;
+         }
+
       }
       userStats['longest_duration'] = longest;
-      userStats['total_made'] = earnings;
-
+      userStats['total_made'] = earnings.toFixed(2);
 
       res.setHeader('Content-Type', 'application/json');
       res.send(JSON.stringify(userStats));

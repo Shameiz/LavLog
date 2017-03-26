@@ -11,7 +11,7 @@ var schemaOptions = {
 
 var poopSchema = new mongoose.Schema({
     startTime: { type: Date, default: Date.now },
-    seconds: Date,
+    seconds: Number,
     moneyMade: Number
 });
 

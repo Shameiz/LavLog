@@ -47,7 +47,6 @@ exports.stopPooping = function(req, res){
       poop.seconds = req.body.time;
 
       var billed_seconds;
-      console.log(user);
       if(user.isSalary == true){
          billed_seconds = user.hrlyRate / (52 * 40 * 60 * 60);
       }else{
