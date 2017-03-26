@@ -12,70 +12,61 @@ block content
         form(method='POST', action='/welcome?_method=PUT')
           legend#head Thank you for signing up!
           .form-group
+            
+          .form-group
+            label(for='hrsPerWeek') What IS YOUR SALARY
+            input.form-control(type='text', name='hrlyRate', id='hrlyRate', placeholder='00.00' required=true)
+              
+          .form-group
+            label.radio-inline.radio.col-sm-4
+              input(type='radio', checked='yes', name='isSalary', value='yes', data-toggle='radio')
+              span HOURLY
 
           .form-group
-            label.col-sm-3 Are you Paid per hour?
-            .col-sm-4
-              label.radio-inline.radio.col-sm-4
-                input(type='radio', checked='yes', name='isSalary', value='yes', data-toggle='radio')
-                span Yes
-
-              label.radio-inline.radio.col-sm-4
-                input(type='radio', checked='female', name='isSalary', value='yes', data-toggle='radio')
-                span No
-                
+            label.radio-inline.radio.col-sm-4
+              input(type='radio', checked='female', name='isSalary', value='no', data-toggle='radio')
+              span YEARLY
+          
           .form-group
-            label(for='hrsPerWeek') If So, What is your Hourly Rate
-            input.form-control(type='text', name='hrlyRate', id='hrlyRate', placeholder='00.00')
-
-          .form-group
-            label(for='yearSalary') If No, What is your Yearly Salary
-            input.form-control(type='text', name='yearSalary', id='yearSalary', placeholder='Current Pay', autofocus=true )
-
-
-          .form-group
-            label(for='hrlyRate') If Yes, What is your Hourly Rate
-            input.form-control(type='text', name='hrlyRate', id='hrlyRate', placeholder='15.50')
-
+            label 
+          
           .form-group
             label(for='hrsPerWeek') Number of Hours Worked per Week
-            input.form-control(type='text', name='hrsPerWeek', id='hrsPerWeek', placeholder='0')
+            input.form-control(type='text', name='hrsPerWeek', id='hrsPerWeek', placeholder='0' required=true)
 
           .form-group
-            label(for='employer') Employer
-            input.form-control(type='text', name='employer', id='employer', placeholder='LavLog LLC.' )
+            label(for='employer') Place of Work
+            input.form-control(type='text', name='employer', id='employer', placeholder='' required=true )
 
           .form-group
             label(for='position') Position
-            input.form-control(type='text', name='position', id='position', placeholder='')
+            input.form-control(type='text', name='position', id='position', placeholder='' required=true)
 
           .form-group
             label(for='age') Age
-            input.form-control(type='text', name='age', id='age', placeholder='20')
+            input.form-control(type='text', name='age', id='age', placeholder='')
           .form-group
-            label.col-sm-3(for='location') Location
-            .col-sm-7
-              input.form-control(type='text', name='location', id='location')
+            label(for='location') Location
+            input.form-control(type='text', name='location', id='location')
 
           .form-group
-            label.col-sm-3 Gender
-            .col-sm-4
-              label.radio-inline.radio.col-sm-4
-                input(type='radio', checked='male', name='gender', value='male', data-toggle='radio')
-                span Male
-              label.radio-inline.col-sm-4
-                input(type='radio', checked='female', name='gender', value='female', data-toggle='radio')
-                span Female
-              label.radio-inline.col-sm-4
-                input(type='radio', checked='none', name='gender', value='none', data-toggle='radio')
-                span Non-Binary
+            label(for='gender') Gender
+          
           .form-group
-            small.text-muted By signing up, you agree to the <a href="/">Terms of Service</a>.
+            label.radio-inline.radio.col-sm-4
+              input(type='radio', checked='male', name='gender', value='male', data-toggle='radio')
+              span Male
+              
+          .form-group
+            label.radio-inline.radio.col-sm-4
+              input(type='radio', checked='female', name='gender', value='female', data-toggle='radio')
+              span Female
+              
+          .form-group
+            label.radio-inline.radio.col-sm-4
+              input(type='radio', checked='none', name='gender', value='none', data-toggle='radio')
+              span Non-Binary
+          
           button.btn.btn-success(type='submit') Create an account
           
-          .hr-title
-            span or     
-
-    p.text-center Already have an account?&nbsp;
-      a(href='/login')
-        strong Log in
+          
