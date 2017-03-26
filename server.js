@@ -26,7 +26,7 @@ var userController = require('./controllers/user');
 var contactController = require('./controllers/contact');
 var onboardingController = require('./controllers/onboarding');
 var statsController = require('./controllers/stats');
-
+var groupsController = require('./controllers/groups');
 // Passport OAuth strategies
 require('./config/passport');
 
@@ -74,13 +74,17 @@ app.delete('/account', userController.ensureAuthenticated, userController.accoun
 //routing signup
 app.get('/signup', userController.signupGet);
 app.post('/signup', userController.signupPost);
+//login in
 app.get('/login', userController.loginGet);
 app.post('/login', userController.loginPost);
+//reset password
 app.get('/forgot', userController.forgotGet);
 app.post('/forgot', userController.forgotPost);
 app.get('/reset/:token', userController.resetGet);
 app.post('/reset/:token', userController.resetPost);
+// logout
 app.get('/logout', userController.logout);
+
 app.get('/unlink/:provider', userController.ensureAuthenticated, userController.unlink);
 app.get('/auth/facebook', passport.authenticate('facebook', { scope: ['email', 'user_location'] }));
 app.get('/auth/facebook/callback', passport.authenticate('facebook', { successRedirect: '/', failureRedirect: '/login' }));
@@ -88,6 +92,8 @@ app.get('/auth/twitter', passport.authenticate('twitter'));
 app.get('/auth/twitter/callback', passport.authenticate('twitter', { successRedirect: '/', failureRedirect: '/login' }));
 //profile route
 app.get('/profile', userController.getProfile);
+
+app.get('/groups',groupsController.getGroups)
 
 // Production error handler
 if (app.get('env') === 'production') {

@@ -2,6 +2,13 @@ extends ../layout
 block content 
 	include ../includes/header
 
+	h1 #{user.name}
+	if (picture)
+		img(src="#{picture}" class="img-circle")
+	else 
+		img(src="https://gravatar.com/avatar/?s=200&d=retro")
+
+
 	
 	.container-fluid
 		.row.user-container
@@ -47,3 +54,4 @@ block content
 				h2.stat All-Time
 				h3.money $159.65
 				h3.hours 24.00 hours
+

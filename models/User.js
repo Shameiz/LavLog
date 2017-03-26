@@ -38,6 +38,8 @@ var userSchema = new mongoose.Schema({
   position: String,
   age: Number,
   gender: String,
+  totalTime: Number,
+  totalMade: Number,
   poops: [poopSchema]
 }, schemaOptions);
 
