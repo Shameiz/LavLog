@@ -1,7 +1,7 @@
 extends ../layout
 
 block content
-  include includes/header
+  include ../includes/header
   .container
     .panel
       .panel-body
@@ -19,11 +19,11 @@ block content
           .form-group
             label.col-sm-3(for='email') Email
             .col-sm-7
-              input.form-control(type='email', name='email', id='email', value=user.email)
+              input.form-control(type='email', name='email', id='email', value=user.email, required=true)
           .form-group
             label.col-sm-3(for='name') Name
             .col-sm-7
-              input.form-control(type='text', name='name', id='name', value=user.name)
+              input.form-control(type='text', name='name', id='name', value=user.name, required=true)
           .form-group
             label.col-sm-3 Gender
             .col-sm-4
@@ -33,6 +33,38 @@ block content
               label.radio-inline.col-sm-4
                 input(type='radio', checked=(user.gender == 'female'), name='gender', value='female', data-toggle='radio')
                 span Female
+                
+          .form-group
+            label.col-sm-3(for='hrlyRate') Pay Rate
+            .col-sm-7
+              input.form-control(type='text', name='hrlyRate', id='hrlyRate', value=user.hrlyRate, required=true)
+              
+          .form-group
+            label.col-sm-3 Pay Type
+            .col-sm-4
+              label.radio-inline.radio.col-sm-4
+                input(type='radio', checked='yes', name='isSalary', value='yes', data-toggle='radio')
+                span Hourly
+              label.radio-inline.radio.col-sm-4
+                input(type='radio', checked='female', name='isSalary', value='no', data-toggle='radio')
+                span Salary
+              
+          .form-group
+            label.col-sm-3(for='hrsPerWeek') Hours Worked per Week
+            .col-sm-7
+              input.form-control(type='text', name='hrsPerWeek', id='hrsPerWeek', value=user.hrsPerWeek, required=true)
+
+          .form-group
+            label.col-sm-3(for='employer') Place of Work
+            .col-sm-7
+              input.form-control(type='text', name='employer', id='employer', value=user.employer ,required=true )
+
+          .form-group
+            label.col-sm-3(for='position') Position
+            .col-sm-7
+              input.form-control(type='text', name='position', id='position', value=user.position ,required=true)
+
+                    
           .form-group
             label.col-sm-3(for='location') Location
             .col-sm-7
@@ -41,10 +73,6 @@ block content
             label.col-sm-3(for='website') Website
             .col-sm-7
               input.form-control(type='text', name='website', id='website', value=user.website)
-          .form-group
-            label.col-sm-3 Gravatar
-            .col-sm-4
-              img(src=user.gravatar, class='profile', width='100', height='100')
           .form-group
             .col-sm-offset-3.col-sm-4
               button.btn.btn-success(type='submit') Update Profile

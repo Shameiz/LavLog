@@ -91,10 +91,13 @@ app.get('/auth/facebook/callback', passport.authenticate('facebook', { successRe
 app.get('/auth/twitter', passport.authenticate('twitter'));
 app.get('/auth/twitter/callback', passport.authenticate('twitter', { successRedirect: '/', failureRedirect: '/login' }));
 //profile route
-app.get('/profile', userController.getProfile);
+app.get('/profile', userController.ensureAuthenticated,userController.getProfile);
 
 app.get('/groups',groupsController.getGroups)
 app.get('/groups/:id',groupsController.getOneGroup)
+
+app.get('/groups',userController.ensureAuthenticated,groupsController.getGroups)
+
 
 // Production error handler
 if (app.get('env') === 'production') {
