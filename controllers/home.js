@@ -20,7 +20,7 @@ POST/ start timer
 exports.startPooping = function(req, res){
 
    //will be req.user.email
-   User.findOne({ email: req.user.email }, function(err, user) {
+   User.findOne({ email: "lguerdan@yahoo.com" }, function(err, user) {
 
       var timeStamp = Math.floor((new Date).getTime() / 1000);
       console.log(user);
@@ -39,7 +39,7 @@ exports.startPooping = function(req, res){
 
 exports.stopPooping = function(req, res){
    //will be req.user.email
-   User.findOne({ email: req.user.email }, function(err, user) {
+   User.findOne({ email: "lguerdan@yahoo.com" }, function(err, user) {
 
       console.log(req.body);
 
@@ -47,6 +47,7 @@ exports.stopPooping = function(req, res){
       poop.seconds = req.body.time;
 
       var billed_seconds;
+      console.log(user);
       if(user.isSalary == true){
          billed_seconds = user.hrlyRate / (52 * 40 * 60 * 60);
       }else{
@@ -54,6 +55,7 @@ exports.stopPooping = function(req, res){
       }
       var money = (billed_seconds * poop.seconds);
       poop.moneyMade = money.toFixed(2);
+      console.log("money:" + poop.moneyMade);
       user.poops[0] = poop;
       user.totalMade += poop.moneyMade;
       user.poops.unshift(poop);
