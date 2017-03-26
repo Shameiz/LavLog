@@ -7,18 +7,18 @@ var User = require('../models/User');
 
 
 /**
- * PUT /account
+ * PUT /welcome
  * Update profile information OR change password.
  */
-exports.userOnboardingPut = function(req, res, next) {
+exports.userOnboardingPut= function(req, res, next) {
+   console.log('sub');
    User.findOne({ email: req.user.email }, function(err, user) {
-
+      console.log(err);
       user.yearSalary = req.body.yearSalary;
       user.gender = req.body.gender;
       user.location = req.body.location;
       user.isSalary = req.body.isSalary;
       user.hrlyRate= req.body.hrlyRate;
-      user.yearSalary = req.body.yearSalary;
       user.hrsPerWeek = req.hrsPerWeek;
       user.employer = req.body.employer;
       user.position = req.body.position;
@@ -26,15 +26,16 @@ exports.userOnboardingPut = function(req, res, next) {
       user.poops = [];
 
       user.save(function(err) {
+         res.redirect('/');
+         console.log(err);
          req.logIn(user, function(err) {
-            res.redirect('/');
+
          });
       });
    });
 };
 
 exports.userOnboardingGet = function(req, res) {
-
    if (!req.user){
       res.redirect('/signup');
    }
