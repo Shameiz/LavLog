@@ -50,6 +50,7 @@
             $.ajax({
               type: "PUT",
               url: "/",
+
               data: bathroomTrip,
               success : function(data) {
                 console.log(JSON.stringify(data));
