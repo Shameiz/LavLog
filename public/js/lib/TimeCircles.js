@@ -33,10 +33,10 @@
          clearInterval(Interval);
          time = seconds + minutes * 60;
          endTime = (time * 1000 + startTime);
-         //minutes = "00";
-         //seconds = "00";
-         //appendSeconds.innerHTML = seconds;
-         //appendMinutes.innerHTML = minutes;
+         minutes = "00";
+         seconds = "00";
+         appendSeconds.innerHTML = seconds;
+         appendMinutes.innerHTML = minutes;
 
          bathroomTrip = {
             time : time,
