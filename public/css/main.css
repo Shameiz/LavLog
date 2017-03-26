@@ -6016,24 +6016,6 @@ label {
   font-family: "Raleway", sans-serif;
   color: #f2ebd9; }
 
-
-.form > legend {
-  font-family: "Montserrat", sans-serif;
-  color: #000000; }
-
-.form-group > label {
-  font-family: "Raleway", sans-serif;
-  color: #fffb7b;
-  font-size: 100px; }
-
-.form-group > p {
-  font-family: "Raleway", sans-serif;
-  color: #f2ebd9; }
-
-#head {
-  font-family: "Montserrat", sans-serif;
-  color: #f2ebd9; }
-
 .user-info {
   font-size: 1.5em;
   margin: 0;
@@ -6105,6 +6087,22 @@ label {
   .stat {
     font-size: 1.7em; } }
 
+.form > legend {
+  font-family: "Montserrat", sans-serif;
+  color: #000000; }
+
+.form-group > label {
+  font-family: "Raleway", sans-serif;
+  color: #fffb7b;
+  font-size: 100px; }
+
+.form-group > p {
+  font-family: "Raleway", sans-serif;
+  color: #f2ebd9; }
+
+#head {
+  font-family: "Montserrat", sans-serif;
+  color: #f2ebd9; }
 
 html {
   position: relative;
