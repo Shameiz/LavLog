@@ -52,6 +52,8 @@
               url: "/",
               data: bathroomTrip
             });
+            $("#durration").text("Time spent: "+bathroomTrip.time+" Seconds").show();
+            // money bitch
          }
       }else{
          buttonToggle.innerHTML = "Stop";
