@@ -13,3 +13,106 @@
   font-family: $secondary-font;
   color: $third-color;
 }
+
+
+//////////////
+/// PROFILE //
+//////////////
+
+.user-info {
+	font-size: 1.5em;
+	margin: 0;
+	padding: 0;
+	margin-bottom: 12px;
+	text-align: left;
+	font-family: $secondary-font;
+	opacity: 0.8;
+}
+
+#profilepic {
+	margin-left: 20px;
+	padding-left: 5px;
+}
+
+#all-stats {
+	width:90%;
+}
+
+.user-container {
+	margin: 10px auto;
+}
+
+.col-xs-7 {
+	margin-top: 4%;
+}
+
+.stat-wrapper {
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.stat {
+	color: $secondary-color;
+	font-size: 1.3em;
+	margin-bottom: 7.5px;
+}
+
+.money,
+.hours {
+	color: $third-color;
+	text-transform: lowercase;
+}
+
+.hours {
+	font-size: 1em;
+	opacity: 0.6;
+	margin-top: 7.5px;
+}
+
+.money {
+	font-size: 2em;
+	margin: 0;
+}
+
+@media screen and (min-width: 400px) {
+	.col-xs-7 {
+	margin-top: 6%;
+	}
+}
+
+@media screen and (min-width: 470px) {
+	.col-xs-7 {
+	margin-top: 8%;
+	}
+
+	.user-info {
+		font-size: 1.7em;
+	}
+}
+
+@media screen and (min-width: 510px) {
+	.col-xs-7 {
+	margin-top: 7%;
+	}
+}
+
+@media screen and (min-width: 840px) {
+	.col-xs-7 {
+	margin-top: 4%;
+	}
+}
+
+@media screen and (min-width: 1000px) {
+	.hours {
+		font-size: 1.67em;
+	}
+
+	.money {
+		font-size: 3em;
+	}
+
+	.stat {
+	font-size: 1.7em;
+}
+
+}
