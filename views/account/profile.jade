@@ -2,13 +2,6 @@ extends ../layout
 block content 
 	include ../includes/header
 
-	h1 #{user.name}
-	if (picture)
-		img(src="#{picture}" class="img-circle")
-	else 
-		img(src="https://gravatar.com/avatar/?s=200&d=retro")
-
-
 	
 	.container-fluid
 		.row.user-container
