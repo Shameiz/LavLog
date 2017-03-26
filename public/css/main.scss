@@ -114,7 +114,7 @@ footer {
 
 .btn-toolbar > .btn {
   float: none;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .btn {
@@ -135,12 +135,7 @@ footer {
 }
 
 .btn-success {
-  border-color: #208a46;
-  background: #29b35b linear-gradient(to bottom, #2ec866, #29b35b);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.1), inset 0 -1px 4px rgba(32, 138, 70, 0.3);
-  &:active {
-    background: darken(#29b35b, 6%) linear-gradient(to bottom, darken(#2ec866, 6%), darken(#29b35b, 6%));
-  }
+  background: #29b35b;
 }
 
 .btn-danger {
@@ -154,9 +149,7 @@ footer {
 
 .btn-facebook {
   color: #fff;
-  border-color: #335190;
-  background: #3b5998 linear-gradient(to bottom, #4263a9, #3b5998);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.1), inset 0 -1px 4px rgba(59, 89, 152, 0.3);
+  background: #3b5998;
   &:hover,
   &:focus {
     color: #fff;
@@ -165,9 +158,7 @@ footer {
 
 .btn-twitter {
   color: #fff;
-  border-color: #009fdb;
-  background: #00aced linear-gradient(to bottom, #05baff, #00aced);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.1), inset 0 -1px 4px rgba(0, 172, 237, 0.3);
+  background: #00aced;
   &:hover,
   &:focus {
     color: #fff;
@@ -229,7 +220,7 @@ textarea {
 
 .hr-title {
   height: auto;
-  margin-top: 20px;
+  margin-top: 30px;
   border-top: 1px solid;
   color: #bbb;
   font-size: 16px;

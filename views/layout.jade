@@ -9,20 +9,19 @@ html
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:900" rel="stylesheet">
     <link href="/css/vendor/TimeCircles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
   body
 
-    include includes/header
-
-    #barba-wrapper
-      .barba-container
-
-        block content
-
-
+    block content
+  
+    script(src="https://code.highcharts.com/highcharts.js")
+    script(src="https://code.highcharts.com/modules/exporting.js")
     script(src='/js/lib/jquery.js')
     script(src='/js/lib/bootstrap.js')
     script(src='/js/main.js')
     script(src='/js/lib/TimeCircles.js')
+  
+    
 
     // Google Analytics: change UA-XXXXX-X to be your site's ID.
     script.
