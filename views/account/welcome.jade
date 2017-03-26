@@ -10,7 +10,7 @@ block content
               div= error.msg
 
         form(method='POST', action='/welcome?_method=PUT')
-          legend Thank you for signing up!
+          legend#head Thank you for signing up!
           .form-group
 
           .form-group
@@ -19,13 +19,13 @@ block content
               label.radio-inline.radio.col-sm-4
                 input(type='radio', checked='yes', name='isSalary', value='yes', data-toggle='radio')
                 span Yes
-              label.radio-inline.col-sm-4
-                input(type='radio', checked='female', name='isSalary', value='yes', data-toggle='radio')
-                span No
+                label.radio-inline.radio.col-sm-4
+                  input(type='radio', checked='female', name='isSalary', value='yes', data-toggle='radio')
+                  span No
 
           .form-group
             label(for='hrsPerWeek') If So, What is your Hourly Rate
-            input.form-control(type='text', name='hrlyRate', id='hrlyRate', placeholder='15.50')
+            input.form-control(type='text', name='hrlyRate', id='hrlyRate', placeholder='00.00')
 
          .form-group
             label(for='yearSalary') If Not, What is Your Yearly Salary
@@ -33,7 +33,7 @@ block content
 
           .form-group
             label(for='hrsPerWeek') Number of Hours Worked per Week
-            input.form-control(type='text', name='hrsPerWeek', id='hrsPerWeek', placeholder='19.00')
+            input.form-control(type='text', name='hrsPerWeek', id='hrsPerWeek', placeholder='0')
 
           .form-group
             label(for='employer') Employer
@@ -41,7 +41,7 @@ block content
 
           .form-group
             label(for='position') Position
-            input.form-control(type='text', name='position', id='position', placeholder='Poo tracker')
+            input.form-control(type='text', name='position', id='position', placeholder='')
 
           .form-group
             label(for='age') Age
@@ -64,13 +64,8 @@ block content
                 input(type='radio', checked='none', name='gender', value='none', data-toggle='radio')
                 span Non-Binary
 
-          .form-group
-            small.text-muted By signing up, you agree to the <a href="/">Terms of Service</a>.
-          button.btn.btn-success(type='submit') Create an account
+          
+              a(href="../#_=_")
+                button.btn.btn-success(type='submit') Create an account
 
-        .hr-title
-          span or
-
-    p.text-center Already have an account?&nbsp;
-      a(href='/login')
-        strong Log in
+        
