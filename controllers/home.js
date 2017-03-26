@@ -19,7 +19,6 @@ POST/ start timer
 */
 exports.startPooping = function(req, res){
 
-   //will be req.user.email
    User.findOne({ email: "lguerdan@yahoo.com" }, function(err, user) {
 
       var timeStamp = Math.floor((new Date).getTime() / 1000);

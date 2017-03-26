@@ -31,25 +31,3 @@ Highcharts.chart('trip-graph', {
         data: [3.9, 4.2, 5.7, 8.5, 11.9]
     }]
 });
-
-var poopData
-
-$.ajax({
-  type: "GET",
-  url: "/",
-  success : function(data) {
-    console.log(JSON.stringify(data));
-    poopData = data
- }
- });
-
-
-function httpGet(theUrl)
-{
-    var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
-    xmlHttp.send( null );
-    return xmlHttp.responseText;
-}
-
-httpGet('/')
