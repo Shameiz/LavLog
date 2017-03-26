@@ -23,6 +23,8 @@ exports.userOnboardingPut= function(req, res, next) {
       user.employer = req.body.employer;
       user.position = req.body.position;
       user.age = req.body.age;
+      user.totalSeconds = 0,
+      user.totalMade = 0,
       user.poops = [];
 
       user.save(function(err) {
