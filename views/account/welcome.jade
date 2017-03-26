@@ -12,27 +12,24 @@ block content
         form(method='POST', action='/welcome?_method=PUT')
           legend#head Thank you for signing up!
           .form-group
-            
+
           .form-group
             label(for='hrlyRate') What is your salary
             input.form-control(type='text', name='hrlyRate', id='hrlyRate', placeholder='00.00' required=true)
-              
+
           .form-group
             label.radio-inline.radio.col-sm-4
-              input(type='radio', checked='yes', name='isSalary', value='yes', data-toggle='radio')
+              input(type='radio', checked='yes', name='isSalary', value='no', data-toggle='radio')
               span Hourly
 
           .form-group
             label.radio-inline.radio.col-sm-4
-              input(type='radio', checked='female', name='isSalary', value='no', data-toggle='radio')
+              input(type='radio', checked='female', name='isSalary', value='yes', data-toggle='radio')
               span Yearly
-          
+
           .form-group
-            label 
-          
-          .form-group
-            label(for='hrsPerWeek') Number of Hours Worked per Week
-            input.form-control(type='text', name='hrsPerWeek', id='hrsPerWeek', placeholder='0', required=true)
+            label(for='weeklyHours') Number of Hours Worked per Week
+            input.form-control(type='text', name='weeklyHours', id='weeklyHours', placeholder='0' required=true)
 
           .form-group
             label(for='employer') Place of Work
@@ -51,21 +48,21 @@ block content
 
           .form-group
             label(for='gender') Gender
-          
+
           .form-group
             label.radio-inline.radio.col-sm-4
               input(type='radio', checked='male', name='gender', value='male', data-toggle='radio')
               span Male
-              
+
           .form-group
             label.radio-inline.radio.col-sm-4
               input(type='radio', checked='female', name='gender', value='female', data-toggle='radio')
               span Female
-              
+
           .form-group
 
             label.radio-inline.radio.col-sm-4
               input(type='radio', checked='none', name='gender', value='none', data-toggle='radio')
               span Non-Binary
-          
+
           button.btn.btn-success(type='submit') Create an account

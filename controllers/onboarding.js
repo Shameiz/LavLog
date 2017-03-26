@@ -19,12 +19,11 @@ exports.userOnboardingPut= function(req, res, next) {
       user.location = req.body.location;
       user.isSalary = req.body.isSalary;
       user.hrlyRate= req.body.hrlyRate;
-      user.hrsPerWeek = req.hrsPerWeek;
+      user.weeklyHours = req.weeklyHours;
       user.employer = req.body.employer;
       user.position = req.body.position;
       user.age = req.body.age;
-      user.totalSeconds = 0,
-      user.totalMade = 0,
+      user.totalMade = 0;
       user.poops = [];
 
       user.save(function(err) {
