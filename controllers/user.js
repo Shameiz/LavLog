@@ -168,8 +168,8 @@ exports.accountPut = function(req, res, next) {
 exports.getProfile = function(req, res, next) {
   User.findOne({ name: req.user.name }, function(err, user) {
     res.render('account/profile', {
-      user : user.name,
-      picture : req.user.picture
+      user : user,
+      picture : user.picture
     })
   })
 }
