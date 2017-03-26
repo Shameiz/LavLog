@@ -30,7 +30,6 @@ exports.getUserStats = function(req, res) {
             earnings += user.poops[i].moneyMade;
          }
          if(user.poops[i].seconds){
-            console.log(user.poops[i].seconds.toFixed(2))
             total_secs += user.poops[i].seconds;
          }
       }

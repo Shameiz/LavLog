@@ -1,26 +1,26 @@
 extends ../layout
-block content 
+block content
 	include ../includes/header
 
-	
+
 	.container-fluid.animated.fadeIn
 		.row.user-container
 			.col-xs-5.col-sm-6
 				if (picture)
 					img(src="#{picture}" class="img-circle img-responsive pull-right" id="profilepic")
-				else 
+				else
 					img(src="https://gravatar.com/avatar/?s=200&d=retro" class="img-circle img-responsive pull-right")
 			.col-xs-7.col-sm-6
 				h1.user-info #{user.name}
 				h1.user-info #{user.employer}
 				h1.user-info #{user.position}
-	
+
 
 	.container-fluid#all-stats.animated.fadeIn
-		.row			
+		.row
 			.col-xs-6.stat-wrapper.col-lg-4
 				h2.stat Current Week
-				h3.money 
+				h3.money
 				h3.hours 1.23 hours
 
 			.col-xs-6.stat-wrapper.col-lg-4
@@ -35,20 +35,20 @@ block content
 
 			.col-xs-6.stat-wrapper.col-lg-4
 				h2.stat Longest Trip
-				h3.money $1.76
-				h3.hours 0.31 hours
+				h3.money(id="longest-trip") $1.76
+				h3.hours(id="lt-money") 0.31 hours
 
 			.col-xs-6.stat-wrapper.col-lg-4
 				h2.stat Shortest Trip
-				h3.money $0.47
-				h3.hours 0.01 hours
+				h3.money(id="shortest-trip") $0.47
+				h3.hours(id="st-money") 0.01 hours
 
 			.col-xs-6.stat-wrapper.col-lg-4
 				h2.stat All-Time
-				h3.money $159.65
-				h3.hours 24.00 hours
+				h3.money(id="total-made") $159.65
+				h3.hours(id="total-secs") 24.00 hours
 
 	.but-can.animated.fadeIn
 		a(href="/account")
 			button.button Settings
-	
+
