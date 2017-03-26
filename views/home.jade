@@ -1,7 +1,6 @@
 extends layout
 
 block content
-  include includes/header
   .container-fluid
     if messages.error
       .alert.alert-danger(role='alert')
@@ -17,6 +16,7 @@ block content
           div= info.msg
 
     if user
+      include includes/header
       include includes/counter
 
     else
