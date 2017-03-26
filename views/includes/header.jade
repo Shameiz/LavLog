@@ -22,9 +22,9 @@ nav.navbar.navbar-default.navbar-static-top
         if user
           li.dropdown
 
-            a.navbar-avatar.dropdown-toggle(href='#', data-toggle='dropdown')
-              if picture
-                img(src=picture)
+            a.navbar-avatar.dropdown-toggle(href='/profile')
+              if user.picture
+                img(src=user.picture)
 
               else
                 img(src=user.gravatar)

@@ -3,6 +3,7 @@ block content
 	include ../includes/header
 	h1 #{user}
 	if (picture)
-		img(src="#{picture}")
+		img(src="#{picture}" class="img-circle")
 	else 
-		h1 photo fail
+		
+		img(src="https://gravatar.com/avatar/?s=200&d=retro")
