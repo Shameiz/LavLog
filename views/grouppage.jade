@@ -20,28 +20,31 @@ html
 
     h1.center#groupname #{group}
     h1.center#lb Leaderboard
-
+    if(user.picture)
+      -var propic=user.picture
+    else
+      -var propic=user.gravatar
     .container-fluid
       .row
         .col-xs-6
           h2.center.lb Current Week
           .row.user-container
             .col-xs-5.col-sm-6
-              img(src="#{picture}" class="img-circle img-responsive pull-right" id="profilepic")
+              img(src=propic class="img-circle img-responsive pull-right" id="profilepic")
             .col-xs-7.col-sm-6
               h2.user-info #{user.name}
               h3.money $15.83
               h3.hours 1.23 hours
           .row.user-container
             .col-xs-5.col-sm-6
-              img(src="#{picture}" class="img-circle img-responsive pull-right" id="profilepic")
+              img(src=propic class="img-circle img-responsive pull-right" id="profilepic")
             .col-xs-7.col-sm-6
               h2.user-info #{user.name}
               h3.money $15.83
               h3.hours 1.23 hours
           .row.user-container
             .col-xs-5.col-sm-6
-              img(src="#{picture}" class="img-circle img-responsive pull-right" id="profilepic")
+              img(src=propic class="img-circle img-responsive pull-right" id="profilepic")
             .col-xs-7.col-sm-6
               h2.user-info #{user.name}
               h3.money $15.83
@@ -49,21 +52,21 @@ html
           h2.center.lb Average Week
           .row.user-container
             .col-xs-5.col-sm-6
-              img(src="#{picture}" class="img-circle img-responsive pull-right" id="profilepic")
+              img(src=propic class="img-circle img-responsive pull-right" id="profilepic")
             .col-xs-7.col-sm-6
               h2.user-info #{user.name}
               h3.money $15.83
               h3.hours 1.23 hours
           .row.user-container
             .col-xs-5.col-sm-6
-              img(src="#{picture}" class="img-circle img-responsive pull-right" id="profilepic")
+              img(src=propic class="img-circle img-responsive pull-right" id="profilepic")
             .col-xs-7.col-sm-6
               h2.user-info #{user.name}
               h3.money $15.83
               h3.hours 1.23 hours
           .row.user-container
             .col-xs-5.col-sm-6
-              img(src="#{picture}" class="img-circle img-responsive pull-right" id="profilepic")
+              img(src=propic class="img-circle img-responsive pull-right" id="profilepic")
             .col-xs-7.col-sm-6
               h2.user-info #{user.name}
               h3.money $15.83
@@ -71,21 +74,21 @@ html
           h2.center.lb Best Week
           .row.user-container
             .col-xs-5.col-sm-6
-              img(src="#{picture}" class="img-circle img-responsive pull-right" id="profilepic")
+              img(src=propic class="img-circle img-responsive pull-right" id="profilepic")
             .col-xs-7.col-sm-6
               h2.user-info #{user.name}
               h3.money $15.83
               h3.hours 1.23 hours
           .row.user-container
             .col-xs-5.col-sm-6
-              img(src="#{picture}" class="img-circle img-responsive pull-right" id="profilepic")
+              img(src=propic class="img-circle img-responsive pull-right" id="profilepic")
             .col-xs-7.col-sm-6
               h2.user-info #{user.name}
               h3.money $15.83
               h3.hours 1.23 hours
           .row.user-container
             .col-xs-5.col-sm-6
-              img(src="#{picture}" class="img-circle img-responsive pull-right" id="profilepic")
+              img(src=propic class="img-circle img-responsive pull-right" id="profilepic")
             .col-xs-7.col-sm-6
               h2.user-info #{user.name}
               h3.money $15.83
@@ -94,21 +97,21 @@ html
           h2.center.lb Longest Trip
           .row.user-container
             .col-xs-5.col-sm-6
-              img(src="#{picture}" class="img-circle img-responsive pull-right" id="profilepic")
+              img(src=propic class="img-circle img-responsive pull-right" id="profilepic")
             .col-xs-7.col-sm-6
               h2.user-info #{user.name}
               h3.money $15.83
               h3.hours 1.23 hours
           .row.user-container
             .col-xs-5.col-sm-6
-              img(src="#{picture}" class="img-circle img-responsive pull-right" id="profilepic")
+              img(src=propic class="img-circle img-responsive pull-right" id="profilepic")
             .col-xs-7.col-sm-6
               h2.user-info #{user.name}
               h3.money $15.83
               h3.hours 1.23 hours
           .row.user-container
             .col-xs-5.col-sm-6
-              img(src="#{picture}" class="img-circle img-responsive pull-right" id="profilepic")
+              img(src=propic class="img-circle img-responsive pull-right" id="profilepic")
             .col-xs-7.col-sm-6
               h2.user-info #{user.name}
               h3.money $15.83
@@ -116,21 +119,21 @@ html
           h2.center.lb Shortest Trip
           .row.user-container
             .col-xs-5.col-sm-6
-              img(src="#{picture}" class="img-circle img-responsive pull-right" id="profilepic")
+              img(src=propic class="img-circle img-responsive pull-right" id="profilepic")
             .col-xs-7.col-sm-6
               h2.user-info #{user.name}
               h3.money $15.83
               h3.hours 1.23 hours
           .row.user-container
             .col-xs-5.col-sm-6
-              img(src="#{picture}" class="img-circle img-responsive pull-right" id="profilepic")
+              img(src=propic class="img-circle img-responsive pull-right" id="profilepic")
             .col-xs-7.col-sm-6
               h2.user-info #{user.name}
               h3.money $15.83
               h3.hours 1.23 hours
           .row.user-container
             .col-xs-5.col-sm-6
-              img(src="#{picture}" class="img-circle img-responsive pull-right" id="profilepic")
+              img(src=propic class="img-circle img-responsive pull-right" id="profilepic")
             .col-xs-7.col-sm-6
               h2.user-info #{user.name}
               h3.money $15.83
@@ -138,24 +141,22 @@ html
           h2.center.lb Total
           .row.user-container
             .col-xs-5.col-sm-6
-              img(src="#{picture}" class="img-circle img-responsive pull-right" id="profilepic")
+              img(src=propic class="img-circle img-responsive pull-right" id="profilepic")
             .col-xs-7.col-sm-6
               h2.user-info #{user.name}
               h3.money $15.83
               h3.hours 1.23 hours
           .row.user-container
             .col-xs-5.col-sm-6
-              img(src="#{picture}" class="img-circle img-responsive pull-right" id="profilepic")
+              img(src=propic class="img-circle img-responsive pull-right" id="profilepic")
             .col-xs-7.col-sm-6
               h2.user-info #{user.name}
               h3.money $15.83
               h3.hours 1.23 hours
           .row.user-container
             .col-xs-5.col-sm-6
-              img(src="#{picture}" class="img-circle img-responsive pull-right" id="profilepic")
+              img(src=propic class="img-circle img-responsive pull-right" id="profilepic")
             .col-xs-7.col-sm-6
               h2.user-info #{user.name}
               h3.money $15.83
               h3.hours 1.23 hours
-
-
