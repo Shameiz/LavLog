@@ -2,32 +2,17 @@
 //   Barba.Pjax.start();
 // });
 
-// var moneydata, timedata; 
-Highcharts.chart('trip-graph', {
-    chart: {
-        type: 'line'
-    },
-    title: {
-        text: 'Trip\'s Over the Past 7-Days'
-    },
-    xAxis: {
-        categories: ['Monday', 'Tuesday', 'Wednesday', 'Thrusday', 'Friday']
-    },
-    yAxis: {
-    },
-    plotOptions: {
-        line: {
-            dataLabels: {
-                enabled: true
-            },
-            enableMouseTracking: false
-        }
-    },
-    series: [{
-        name: 'Money',
-        data: [7.0, 6.9, 9.5, 14.5, 18.4]
-    }, {
-        name: 'Time',
-        data: [3.9, 4.2, 5.7, 8.5, 11.9]
-    }]
-});
+// var moneydata, timedata;
+$.ajax({
+  type: "GET",
+  url: "/stats",
+  success : function(data) {
+    var temp =$('#best-week').text();
+    if ( (temp==null) || (temp=='NaN') ||(temp==0) ||(temp=='') )
+    {
+      temp =1;
+    }
+    var best_week=numeral(data.longest_duration * (temp/3600)).format('0000.00');
+   $('#best-week').text("$" +best_week);
+ }
+ });
