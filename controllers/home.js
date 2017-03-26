@@ -41,28 +41,21 @@ exports.stopPooping = function(req, res){
    //will be req.user.email
    User.findOne({ email: "lguerdan@yahoo.com" }, function(err, user) {
 
-      var timeStamp = Math.floor((new Date).getTime() / 1000);
+      console.log(req.body);
+
       var poop = user.poops[0];
-      poop.stopTime = timeStamp;
+      poop.seconds = req.body.time;
 
-      var duration = poop.stopTime - poop.startTime;
       var billed_seconds;
-
+      console.log(user);
       if(user.isSalary == true){
-         console.log('hit');
-         billed_seconds = user.yearSalary / (51 * 40 * 60 * 60);
-         billed_seconds = Math.round(billed_seconds * 100) / 100;
+         billed_seconds = user.hrlyRate / (52 * 40 * 60 * 60);
       }else{
-         billed_seconds = (52 * user.hrlyRate * user.hrsPerWeek) / (51 * 40 * 60 * 60);
-         billed_seconds = Math.round(billed_seconds * 100) / 100;
+         billed_seconds = (user.hrlyRate) / ( 60 * 60);
       }
 
-      poop.moneyMade = (billed_seconds * moment.duration(duration).seconds());
-      poop.seconds = (moment.duration(duration).seconds() % 60);
-      poop.minutes = (moment.duration(duration).minutes());
+      poop.moneyMade = (billed_seconds * poop.seconds);
       user.poops[0] = poop;
-
-      user.totalSeconds += poop.seconds;
       user.totalMade += poop.moneyMade;
 
       user.save(function(err) {

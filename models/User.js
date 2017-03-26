@@ -11,7 +11,7 @@ var schemaOptions = {
 
 var poopSchema = new mongoose.Schema({
     startTime: { type: Date, default: Date.now },
-    stopTime: Date,
+    seconds: Date,
     moneyMade: Number
 });
 
@@ -33,12 +33,11 @@ var userSchema = new mongoose.Schema({
   yearSalary: Number,
   hrlyRate: Number,
   isSalary: Boolean,
-  hrsPerWeek: Number,
   employer: String,
   position: String,
   age: Number,
   gender: String,
-  totalTime: Number,
+  weeklyHours: Number,
   totalMade: Number,
   poops: [poopSchema]
 }, schemaOptions);
