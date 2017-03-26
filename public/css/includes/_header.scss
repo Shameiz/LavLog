@@ -9,11 +9,15 @@ nav.navbar.navbar-default.navbar-static-top{
 }
 
 ul.nav.navbar-nav >li >a{
-  color: black;
+  color: $fifth-color;
   font-family: $primary-font;
   font-size: 22px;
 }
 
 .navbar-default {
 	border: none;
+}
+
+nav {
+	margin: 0;
 }

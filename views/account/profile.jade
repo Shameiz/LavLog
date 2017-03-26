@@ -1,8 +1,49 @@
 extends ../layout
 block content 
 	include ../includes/header
-	h1 #{user.name}
-	if (picture)
-		img(src="#{picture}" class="img-circle")
-	else 
-		img(src="https://gravatar.com/avatar/?s=200&d=retro")
+
+	
+	.container-fluid
+		.row.user-container
+			.col-xs-5.col-sm-6
+				if (picture)
+					img(src="#{picture}" class="img-circle img-responsive pull-right" id="profilepic")
+				else 
+					img(src="https://gravatar.com/avatar/?s=200&d=retro")
+			.col-xs-7.col-sm-6
+				h1.user-info #{user.name}
+				h1.user-info Place of Work
+				h1.user-info Occupation
+	
+
+	.container-fluid#all-stats
+		.row			
+			.col-xs-6.stat-wrapper.col-lg-4
+				h2.stat Current Week
+				h3.money $15.83
+				h3.hours 1.23 hours
+
+			.col-xs-6.stat-wrapper.col-lg-4
+				h2.stat Average Week
+				h3.money $34.56
+				h3.hours 4.99 hours
+
+			.col-xs-6.stat-wrapper.col-lg-4
+				h2.stat Best Week
+				h3.money $100.24
+				h3.hours 12.20 hours
+
+			.col-xs-6.stat-wrapper.col-lg-4
+				h2.stat Longest Trip
+				h3.money $1.76
+				h3.hours 0.31 hours
+
+			.col-xs-6.stat-wrapper.col-lg-4
+				h2.stat Shortest Trip
+				h3.money $0.47
+				h3.hours 0.01 hours
+
+			.col-xs-6.stat-wrapper.col-lg-4
+				h2.stat All-Time
+				h3.money $159.65
+				h3.hours 24.00 hours
