@@ -10,24 +10,17 @@ exports.getUserStats = function(req, res) {
    //will be req.user.email
    User.findOne({ email: "lguerdan@yahoo.com" }, function(err, user) {
       var userStats = {}
-      var prevPoop = user.poops[0];
-      var duration = prevPoop.stopTime - prevPoop.startTime;
-      userStats['prev_min'] = moment.duration(duration).minutes();
-      userStats['prev_sec'] = moment.duration(duration).seconds();
+      var longest = user.poops[0].seconds;
+      var earnings = 0;
 
-      if(user.isSalary == true){
-         console.log('hit');
-         billed_seconds = user.yearSalary / (51 * 40 * 60 * 60);
-         billed_seconds = Math.round(billed_seconds * 100) / 100;
-         userStats['prev_total'] = (billed_seconds * moment.duration(duration).seconds());
-      }else{
-         billed_seconds = (52 * user.hrlyRate * user.hrsPerWeek) / (51 * 40 * 60 * 60);
-         billed_seconds = Math.round(billed_seconds * 100) / 100;
-         userStats['prev_total'] = (billed_seconds * moment.duration(duration).seconds());
+      for(var i = 0;  i < user.poops.length ; i++){
+         if (user.poops[i].seconds > longest) {
+            longest = user.poops[i].seconds;
+         }
+         earnings += user.poops[i].moneyMade;
       }
-
-      console.log(billed_seconds);
-      console.log(moment.duration(duration).seconds());
+      userStats['longest_duration'] = longest;
+      userStats['total_made'] = earnings;
 
 
       res.setHeader('Content-Type', 'application/json');

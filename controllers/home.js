@@ -53,10 +53,11 @@ exports.stopPooping = function(req, res){
       }else{
          billed_seconds = (user.hrlyRate) / ( 60 * 60);
       }
-
-      poop.moneyMade = (billed_seconds * poop.seconds);
+      var money = (billed_seconds * poop.seconds);
+      poop.moneyMade = money.toFixed(2);
       user.poops[0] = poop;
       user.totalMade += poop.moneyMade;
+      user.poops.unshift(poop);
 
       user.save(function(err) {
          console.log(err);
