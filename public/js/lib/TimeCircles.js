@@ -50,10 +50,14 @@
             $.ajax({
               type: "PUT",
               url: "/",
-              data: bathroomTrip
-            });
+              data: bathroomTrip,
+              success : function(data) {
+                console.log(JSON.stringify(data));
+             }
+             });
             $("#durration").text("Time spent: "+bathroomTrip.time+" Seconds").show();
             // money bitch
+
          }
       }else{
          buttonToggle.innerHTML = "Stop";
