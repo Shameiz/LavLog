@@ -12,10 +12,6 @@ block content
         form(method='POST', action='/welcome?_method=PUT')
           legend Thank you for signing up!
           .form-group
-          .form-group
-            label(for='currentPay') Current Pay
-            input.form-control(type='text', name='currentPay', id='currentPay', placeholder='Current Pay', autofocus=true )
-
 
           .form-group
             label.col-sm-3 Are you Paid per hour?
@@ -28,12 +24,16 @@ block content
                 span No
 
           .form-group
-            label(for='isHourly') If So, What is your Hourly Rate
-            input.form-control(type='text', name='isHourly', id='isHourly', placeholder='15.50')
+            label(for='hrsPerWeek') If So, What is your Hourly Rate
+            input.form-control(type='text', name='hrlyRate', id='hrlyRate', placeholder='15.50')
+
+         .form-group
+            label(for='yearSalary') If Not, What is Your Yearly Salary
+            input.form-control(type='text', name='yearSalary', id='yearSalary', placeholder='yearSalary', autofocus=true )
 
           .form-group
-            label(for='overtimeRate') Overtime Rate
-            input.form-control(type='text', name='overtimeRate', id='overtimeRate', placeholder='19.00')
+            label(for='hrsPerWeek') Number of Hours Worked per Week
+            input.form-control(type='text', name='hrsPerWeek', id='hrsPerWeek', placeholder='19.00')
 
           .form-group
             label(for='employer') Employer

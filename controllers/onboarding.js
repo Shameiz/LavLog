@@ -13,12 +13,13 @@ var User = require('../models/User');
 exports.userOnboardingPut = function(req, res, next) {
    User.findOne({ email: req.user.email }, function(err, user) {
 
-      user.currentPay = req.body.currentPay;
+      user.yearSalary = req.body.yearSalary;
       user.gender = req.body.gender;
       user.location = req.body.location;
       user.isSalary = req.body.isSalary;
-      user.isHourly= req.body.isHourly;
-      user.overtimeRate = req.body.overtimeRate;
+      user.hrlyRate= req.body.hrlyRate;
+      user.yearSalary = req.body.yearSalary;
+      user.hrsPerWeek = req.hrsPerWeek;
       user.employer = req.body.employer;
       user.position = req.body.position;
       user.age = req.body.age;
