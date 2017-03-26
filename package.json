@@ -20,6 +20,7 @@
     "highcharts": "^5.0.9",
     "jade": "^1.11.0",
     "method-override": "^2.3.5",
+    "moment": "^2.18.1",
     "mongoose": "^4.4.8",
     "morgan": "^1.7.0",
     "node-sass-middleware": "^0.9.7",
