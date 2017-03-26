@@ -61,7 +61,7 @@ app.post('/', homeController.startPooping);
 app.put('/', homeController.stopPooping);
 // detailed registration
 app.get('/welcome', onboardingController.userOnboardingGet);
-//app.post('/welcome', onboardingController.userOnboardingPost);
+// app.post('/welcome', onboardingController.userOnboardingPost);
 app.put('/welcome', onboardingController.userOnboardingPut);
 
 // routing contact page
