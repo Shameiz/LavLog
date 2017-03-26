@@ -55,10 +55,11 @@
               data: bathroomTrip,
               success : function(data) {
                // console.log(JSON.stringify(data));
-               $('#money-earn').text("Money earned: $" + data.moneyMade).show();
+               $('#money-earn').text("Money Earned : $" + data.moneyMade).show();
+               $("#durration").text("Time Elapsed : "+ bathroomTrip.time+" Seconds").show();
              }
              });
-            $("#durration").text("Previous trip: "+ bathroomTrip.time+" Seconds").show();
+            
          }
       }else{
          $('p').addClass('animated pulse infinite')

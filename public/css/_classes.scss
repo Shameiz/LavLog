@@ -18,6 +18,21 @@
 	line-height: normal;
 }
 
+.button2 {
+	background-color: $fourth-color;
+	color: $primary-color;
+	width: 300px !important;
+	height: 50px;
+	border: 1px solid $fourth-color;
+	font-size: 30px !important;
+	font-family: $secondary-font !important; 
+	border-radius: 10px !important;
+	outline: none;
+	transition: background-color 0.5s;
+	font-weight: normal !important;
+	line-height: normal;
+}
+
 .button:hover {
 	color: $primary-color;
 	background-color: $fourth-color;
