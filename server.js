@@ -94,6 +94,7 @@ app.get('/auth/twitter/callback', passport.authenticate('twitter', { successRedi
 app.get('/profile', userController.getProfile);
 
 app.get('/groups',groupsController.getGroups)
+app.get('/groups/:id',groupsController.getOneGroup)
 
 // Production error handler
 if (app.get('env') === 'production') {
