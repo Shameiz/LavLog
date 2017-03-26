@@ -113,7 +113,7 @@ exports.signupPost = function(req, res, next) {
  * GET /account
  */
 exports.accountGet = function(req, res) {
-  res.render('account/', {
+  res.render('account/account', {
     title: 'My Account'
   });
 };
