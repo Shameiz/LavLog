@@ -14,8 +14,12 @@ exports.getUserStats = function(req, res) {
       var duration = prevPoop.stopTime - prevPoop.startTime;
       userStats['prev_min'] = moment.duration(duration).minutes();
       userStats['prev_sec'] = moment.duration(duration).seconds();
+      // var billed_seconds = 52 * user.hrsPerWeek * 60 * 60;
+      billed_seconds = user.yearSalary / (51 * 40 * 60 * 60);
+      userStats['prev_total'] = (billed_seconds * moment.duration(duration).seconds());
 
-      var timeStamp = Math.floor((new Date).getTime() / 1000);
+      console.log(billed_seconds);
+      console.log(moment.duration(duration).seconds());
 
 
       res.setHeader('Content-Type', 'application/json');

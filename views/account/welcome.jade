@@ -19,17 +19,28 @@ block content
               label.radio-inline.radio.col-sm-4
                 input(type='radio', checked='yes', name='isSalary', value='yes', data-toggle='radio')
                 span Yes
-                label.radio-inline.radio.col-sm-4
-                  input(type='radio', checked='female', name='isSalary', value='yes', data-toggle='radio')
-                  span No
 
+              label.radio-inline.radio.col-sm-4
+                input(type='radio', checked='female', name='isSalary', value='yes', data-toggle='radio')
+                span No
+                
           .form-group
             label(for='hrsPerWeek') If So, What is your Hourly Rate
             input.form-control(type='text', name='hrlyRate', id='hrlyRate', placeholder='00.00')
 
-         .form-group
-            label(for='yearSalary') If Not, What is Your Yearly Salary
-            input.form-control(type='text', name='yearSalary', id='yearSalary', placeholder='yearSalary', autofocus=true )
+          .form-group
+            label.radio-inline.col-sm-4
+              input(type='radio', checked='female', name='isSalary', value='no', data-toggle='radio')
+              span No
+
+          .form-group
+            label(for='yearSalary') If No, What is your Yearly Salary
+            input.form-control(type='text', name='yearSalary', id='yearSalary', placeholder='Current Pay', autofocus=true )
+
+
+          .form-group
+            label(for='hrlyRate') If Yes, What is your Hourly Rate
+            input.form-control(type='text', name='hrlyRate', id='hrlyRate', placeholder='15.50')
 
           .form-group
             label(for='hrsPerWeek') Number of Hours Worked per Week
@@ -63,9 +74,13 @@ block content
               label.radio-inline.col-sm-4
                 input(type='radio', checked='none', name='gender', value='none', data-toggle='radio')
                 span Non-Binary
-
+          .form-group
+            small.text-muted By signing up, you agree to the <a href="/">Terms of Service</a>.
+          button.btn.btn-success(type='submit') Create an account
           
-              a(href="../#_=_")
-                button.btn.btn-success(type='submit') Create an account
+          .hr-title
+            span or     
 
-        
+    p.text-center Already have an account?&nbsp;
+      a(href='/login')
+        strong Log in
