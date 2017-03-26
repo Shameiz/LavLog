@@ -56,9 +56,7 @@
                 console.log(JSON.stringify(data));
              }
              });
-            $("#durration").text("Time spent: "+bathroomTrip.time+" Seconds").show();
-            // money bitch
-
+            $("#durration").text("Previous trip: "+bathroomTrip.time+" Seconds").show();
          }
       }else{
          buttonToggle.innerHTML = "Stop";

@@ -35,22 +35,22 @@ block content
                 span Female
                 
           .form-group
-            label.col-sm-3(for='hrlyRate') What is your salary
+            label.col-sm-3(for='hrlyRate') Pay Rate
             .col-sm-7
               input.form-control(type='text', name='hrlyRate', id='hrlyRate', value=user.hrlyRate, required=true)
               
           .form-group
-            label.radio-inline.radio.col-sm-4
-              input(type='radio', checked='yes', name='isSalary', value='yes', data-toggle='radio')
-              span Hourly
-
-          .form-group
-            label.radio-inline.radio.col-sm-4
-              input(type='radio', checked='female', name='isSalary', value='no', data-toggle='radio')
-              span Yearly
+            label.col-sm-3 Pay Type
+            .col-sm-4
+              label.radio-inline.radio.col-sm-4
+                input(type='radio', checked='yes', name='isSalary', value='yes', data-toggle='radio')
+                span Hourly
+              label.radio-inline.radio.col-sm-4
+                input(type='radio', checked='female', name='isSalary', value='no', data-toggle='radio')
+                span Salary
               
           .form-group
-            label.col-sm-3(for='hrsPerWeek') Number of Hours Worked per Week
+            label.col-sm-3(for='hrsPerWeek') Hours Worked per Week
             .col-sm-7
               input.form-control(type='text', name='hrsPerWeek', id='hrsPerWeek', value=user.hrsPerWeek, required=true)
 
