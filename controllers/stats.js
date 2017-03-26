@@ -8,7 +8,7 @@ var moment = require('moment');
  */
 exports.getUserStats = function(req, res) {
    //will be req.user.email
-   User.findOne({ email: "lguerdan@yahoo.com" }, function(err, user) {
+   User.findOne({ email: req.user.email }, function(err, user) {
       var userStats = {}
       var longest = user.poops[0].seconds;
       var earnings = 0;

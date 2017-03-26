@@ -20,7 +20,7 @@ POST/ start timer
 exports.startPooping = function(req, res){
 
    //will be req.user.email
-   User.findOne({ email: "lguerdan@yahoo.com" }, function(err, user) {
+   User.findOne({ email: req.user.email }, function(err, user) {
 
       var timeStamp = Math.floor((new Date).getTime() / 1000);
       console.log(user);
@@ -39,7 +39,7 @@ exports.startPooping = function(req, res){
 
 exports.stopPooping = function(req, res){
    //will be req.user.email
-   User.findOne({ email: "lguerdan@yahoo.com" }, function(err, user) {
+   User.findOne({ email: req.user.email }, function(err, user) {
 
       console.log(req.body);
 
