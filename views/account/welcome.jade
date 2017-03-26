@@ -1,7 +1,7 @@
 extends ../layout
 
 block content
-  .login-container.container
+  .login-container.container.animated.fadeIn
     .panel
       .panel-body
         if messages.error
@@ -10,7 +10,7 @@ block content
               div= error.msg
 
         form(method='POST', action='/welcome?_method=PUT')
-          legend#head Thank you for signing up!
+          h1(style="font-size: 30px") Just a few more things!
           .form-group
 
           .form-group
@@ -65,4 +65,4 @@ block content
               input(type='radio', checked='none', name='gender', value='none', data-toggle='radio')
               span Non-Binary
 
-          button.btn.btn-success(type='submit') Create an account
+          button.btn.btn-success.hvr-grow(type='submit') Create an account

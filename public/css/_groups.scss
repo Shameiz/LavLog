@@ -1,0 +1,22 @@
+ul,
+li {
+	list-style: none;
+}
+
+.group-wrapper {
+	max-width: 350px;
+	margin: 0 auto
+}
+
+.groups-header {
+	font-size: 40px;
+	margin-top: 0;
+}
+
+ul {
+	padding-left: 0;
+}	
+
+ul > a > li {
+	font-size: 18px;
+}

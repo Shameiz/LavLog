@@ -19,6 +19,7 @@
    var bathroomTrip = {};
 
    buttonToggle.onclick = function() {
+      $('p').removeClass("animated pulse infinite")
       if (pooping == true){
          buttonToggle.innerHTML = "Start";
          pooping = false;
@@ -32,10 +33,10 @@
          clearInterval(Interval);
          time = seconds + minutes * 60;
          endTime = (time * 1000 + startTime);
-         minutes = "00";
-         seconds = "00";
-         appendSeconds.innerHTML = seconds;
-         appendMinutes.innerHTML = minutes;
+         //minutes = "00";
+         //seconds = "00";
+         //appendSeconds.innerHTML = seconds;
+         //appendMinutes.innerHTML = minutes;
 
          bathroomTrip = {
             time : time,
@@ -56,11 +57,10 @@
                 console.log(JSON.stringify(data));
              }
              });
-            $("#durration").text("Time spent: "+bathroomTrip.time+" Seconds").show();
-            // money bitch
-
+            $("#durration").text("Previous trip: "+bathroomTrip.time+" Seconds").show();
          }
       }else{
+         $('p').addClass('animated pulse infinite')
          buttonToggle.innerHTML = "Stop";
          pooping = true;
          clearInterval(Interval);
@@ -82,7 +82,7 @@
   function startTimer () {
     seconds++;
 
-    if(seconds < 9){
+    if(seconds <= 9){
       appendSeconds.innerHTML = "0" + seconds;
     }
 

@@ -3,20 +3,20 @@ block content
 	include ../includes/header
 
 	
-	.container-fluid
+	.container-fluid.animated.fadeIn
 		.row.user-container
 			.col-xs-5.col-sm-6
 				if (picture)
 					img(src="#{picture}" class="img-circle img-responsive pull-right" id="profilepic")
 				else 
-					img(src="https://gravatar.com/avatar/?s=200&d=retro")
+					img(src="https://gravatar.com/avatar/?s=200&d=retro" class="img-circle img-responsive pull-right")
 			.col-xs-7.col-sm-6
 				h1.user-info #{user.name}
-				h1.user-info Place of Work
-				h1.user-info Occupation
+				h1.user-info #{user.employer}
+				h1.user-info #{user.position}
 	
 
-	.container-fluid#all-stats
+	.container-fluid#all-stats.animated.fadeIn
 		.row			
 			.col-xs-6.stat-wrapper.col-lg-4
 				h2.stat Current Week
@@ -48,3 +48,6 @@ block content
 				h3.money $159.65
 				h3.hours 24.00 hours
 
+	.but-can.animated.fadeIn
+		a(href="/account")
+			button.button Settings

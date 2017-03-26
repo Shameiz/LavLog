@@ -6,18 +6,19 @@ nav.navbar.navbar-default.navbar-static-top
         span.icon-bar
         span.icon-bar
         span.icon-bar
-      a.navbar-brand(href='/')
+      a.navbar-brand(href='/') LavLog
     #navbar.navbar-collapse.collapse
       ul.nav.navbar-nav
+        li
 
       ul.nav.navbar-nav.navbar-right
-        li(class=(title == 'Home') ? 'active' : null)
+        li(class='hvr-pop')
           a(href='/') Home
-        li(class=(title == 'Groups') ? 'active' : null)
+        li(class='hvr-pop')
           a(href='/groups') Groups
-        li(class=(title == 'Profile') ? 'active' : null)
+        li(class='hvr-pop')
           a(href='/profile') Profile
-        li(class=(title == 'Logout') ? 'active' : null)
+        li(class='hvr-pop')
           a(href='/logout') Logout
         if user
           li.dropdown

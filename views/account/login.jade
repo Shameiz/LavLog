@@ -2,7 +2,7 @@ extends ../layout
 
 block content
   h1 LavLog
-  .login-container.container
+  .login-container.container.animated.fadeIn
     .panel
       .panel-body
         if messages.error
@@ -20,14 +20,14 @@ block content
           .form-group
             a(href='/forgot')
               strong Forgot your password?
-          button.btn.btn-success.btn-block(type='submit') LOGIN
+          button.hvr-grow-shadow.btn.btn-success.btn-block(type='submit') LOGIN
 
         .hr-title
           span or
 
         .btn-toolbar.text-center
-          a.btn.btn-facebook(href='/auth/facebook') Sign in with Facebook
-          a.btn.btn-twitter(href='/auth/twitter') Sign in with Twitter
+          a.hvr-grow-shadow.btn.btn-facebook(href='/auth/facebook') Sign in with Facebook
+          a.hvr-grow-shadow.btn.btn-twitter(href='/auth/twitter') Sign in with Twitter
 
     p.center Don't have an account?&nbsp;
       a(href='/signup')

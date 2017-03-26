@@ -12,3 +12,10 @@ exports.getGroups = function(req, res) {
     title: 'Groups'
   });
 };
+
+exports.getOneGroup = function(req, res) {
+	res.render('grouppage', {
+		group: req.params.id,
+		picture : req.user.picture
+	});
+};
